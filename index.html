@@ -14,14 +14,14 @@
   <header class="padding-left-right-body">
     <div class="container-fluid">
       <div class="row-first row align-items-center">
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-md-4 col-lg-3">
           <div class="wrap-logo">
             <a href="" class="logo">ренни-тех</a>
             <span class="text">насосное и строительное промышленное оборудование</span>
           </div>
 
         </div>
-        <div class="col-6 col-md-8">
+        <div class="col-6 col-md-8 col-lg-9">
           <div class="wrap-info">
             <div class="wrap-btn">
               <button class="btn btn-outline-secondary">Заказать звонок</button>
@@ -41,7 +41,22 @@
             <a href="" class="btn btn-danger">Услуги</a>
           </div>
         </div>
-        <div class="col-6 col-md-8"></div>
+        <div class="col-6 col-md-8">
+          <div class="wrap-catlog-menu">
+            <button class="btn-bar"></button>
+            <nav>
+              <ul class="menu">
+                <li><a href="">О компании</a></li>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">Наши проекты</a></li>
+                <li><a href="">Видео</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Доставка</a></li>
+                <li><a href="">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -49,39 +64,90 @@
     <div class="container-fluid">
       <div class="swiper mainSwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url('images/slider-1.jpg');">
-            <h3>Гидравлическое оборудование</h3>
-            <p>Гидравлические станции</p>
-            <p>Гидравлические помпы</p>
+          <div class="swiper-slide" onclick="selectActiveSlider(0)">
+            <div class="item" style="background-image: url('images/slider-1.jpg');">
+              <h3>Гидравлическое оборудование</h3>
+              <p>Гидравлические станции</p>
+              <p>Гидравлические помпы</p>
+            </div>
+
           </div>
-          <div class="swiper-slide" style="background-image: url('images/slider-2.jpg');">
-            <h3>Электрические насосы</h3>
+          <div class="swiper-slide" onclick="selectActiveSlider(1)">
+            <div class="item" style="background-image: url('images/slider-2.jpg');">
+              <h3>Электрические насосы</h3>
+            </div>
           </div>
-          <div class="swiper-slide" style="background-image: url('images/slider-3.jpg');">
-            <h3>Водоотведение</h3>
+          <div class="swiper-slide" onclick="selectActiveSlider(2)">
+            <div class="item" style="background-image: url('images/slider-3.jpg');">
+              <h3>Водоотведение</h3>
+            </div>
           </div>
-          <div class="swiper-slide" style="background-image: url('images/slider-4.jpg');">
-            <h3>Перекачка канализации</h3>
+          <div class="swiper-slide" onclick="selectActiveSlider(3)">
+            <div class="item" style="background-image: url('images/slider-4.jpg');">
+              <h3>Перекачка канализации</h3>
+            </div>
           </div>
-          <div class="swiper-slide" style="background-image: url('images/slider-5.jpg');">
-            <h3>Запасные части и рукавные соединения</h3>
+          <div class="swiper-slide" onclick="selectActiveSlider(4)">
+            <div class="item" style="background-image: url('images/slider-5.jpg');">
+              <h3>Запасные части и рукавные соединения</h3>
+            </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="wrap-count-sliders"></div>
       </div>
+
     </div>
   </section>
   <script src="assets/template/js/bootstrap.bundle.min.js"></script>
   <script src="assets/template/js/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".mainSwiper", {
-      slidesPerView: "auto",
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+    var sliders = document.querySelectorAll('.mainSwiper .swiper-slide');
+    var contSliders = document.querySelectorAll('.mainSwiper .swiper-slide').length;
+    for (let i = 0; i < contSliders; i++) {
+      divCounter = document.createElement("div");
+      divCounter.setAttribute('data-index', i);
+      divCounter.setAttribute('onclick', 'setActiveSlider(' + i + ')');
+      if (i == 0) {
+        divCounter.classList.add('active');
+      }
+      document.querySelector('.wrap-count-sliders').append(divCounter)
+    }
+    var mainSwiper = new Swiper(".mainSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      breakpoints: {
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: 0,
+        }
       },
     });
+    mainSwiper.on('slideChange', function () {
+      document.querySelectorAll('.wrap-count-sliders div').forEach((box) => {
+        box.classList.remove('active');
+      })
+      document.querySelector('.wrap-count-sliders div[data-index="' + mainSwiper.activeIndex + '"]').classList.add('active');
+    });
+    function selectActiveSlider(numb) {
+      setActiveSlider(numb)
+    }
+    function setActiveSlider(numb) {
+      document.querySelectorAll('.mainSwiper .swiper-slide').forEach((box) => {
+        box.classList.remove('swiper-slide-active');
+      })
+      document.querySelectorAll('.wrap-count-sliders div').forEach((box) => {
+        box.classList.remove('active');
+      })
+      sliders[numb].classList.add('swiper-slide-active');
+      document.querySelector('.wrap-count-sliders div[data-index="' + numb + '"]').classList.add('active');
+
+      if (document.body.clientWidth < 1400) {
+        //mainSwiper.slideTo(numb);
+      }
+
+      console.log(numb)
+    }
+
   </script>
 </body>
 

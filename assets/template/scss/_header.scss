@@ -6,27 +6,58 @@ header {
   }
   .wrap-logo {
     display: flex;
-    gap: 21px;
+    gap: 0px 21px;
     align-items: center;
+    flex-wrap: wrap;
     .logo {
       color: $primary-red;
       font-family: $font-stack-medium;
-      font-size: 38px;
+      font-size: 28px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
       text-transform: uppercase;
       text-decoration: none;
+      @include media-breakpoint-up(md) {
+        font-size: 30px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 32px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 34px;
+      }
+      @include media-breakpoint-up(xxl) {
+        font-size: 36px;
+      }
+      @media #{$big_screen} {
+        font-size: 38px;
+      }
     }
     .text {
       color: $primary-black-2;
-      font-size: 16px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 400;
       line-height: 120%; /* 19.2px */
       letter-spacing: 0.32px;
       display: inline-block;
       max-width: 287px;
+      @include media-breakpoint-up(md) {
+        font-size: 14px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 14px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 14px;
+      }
+      @include media-breakpoint-up(xxl) {
+        font-size: 14px;
+      }
+      @media #{$big_screen} {
+        font-size: 16px;
+      }
     }
   }
   .wrap-info {
@@ -51,10 +82,25 @@ header {
     &:hover {
       text-decoration: underline;
     }
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 18px;
+    }
+    @media #{$big_screen} {
+      font-size: 20px;
+    }
   }
   .phone {
     color: $primary-black;
-    font-size: 28px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 550;
     line-height: 130%;
@@ -62,6 +108,21 @@ header {
     @include transition(0.3s);
     &:hover {
       text-decoration: underline;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 22px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 24px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 26px;
+    }
+    @media #{$big_screen} {
+      font-size: 28px;
     }
   }
   .wrap-red-menu {
@@ -77,6 +138,42 @@ header {
       gap: 10px;
       flex-shrink: 0;
       @include border-radius(32px);
+    }
+  }
+  .wrap-catlog-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      color: $primary-black;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      a {
+        color: $primary-black;
+        text-decoration: none;
+        &:hover {
+          color: $primary-red;
+        }
+      }
+
+      &.active {
+        a {
+          color: $primary-red;
+        }
+      }
     }
   }
 }
