@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Ренни-Тех</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Ренни-Тех" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="assets/template/css/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/template/css/style.css">
+</head>
+
+<body>
+  <header class="padding-left-right-body">
+    <div class="container-fluid">
+      <div class="row-first row align-items-center">
+        <div class="col-6 col-md-4">
+          <div class="wrap-logo">
+            <a href="" class="logo">ренни-тех</a>
+            <span class="text">насосное и строительное промышленное оборудование</span>
+          </div>
+
+        </div>
+        <div class="col-6 col-md-8">
+          <div class="wrap-info">
+            <div class="wrap-btn">
+              <button class="btn btn-outline-secondary">Заказать звонок</button>
+              <button class="btn btn-outline-secondary">Написать нам</button>
+            </div>
+            <a href="mailTo:info@renni-spb.ru" class="email">info@renni-spb.ru</a>
+            <a href="tel:8 (911) 921-91-91" class="phone">8 (911) 921-91-91</a>
+            <button class="btn-search"></button>
+          </div>
+        </div>
+      </div>
+      <div class="row row-second align-items-center">
+        <div class="col-6 col-md-4">
+          <div class="wrap-red-menu">
+            <a href="" class="btn btn-danger">Продажа</a>
+            <a href="" class="btn btn-danger">Аренда</a>
+            <a href="" class="btn btn-danger">Услуги</a>
+          </div>
+        </div>
+        <div class="col-6 col-md-8"></div>
+      </div>
+    </div>
+  </header>
+  <section class="section section-main-slider">
+    <div class="container-fluid">
+      <div class="swiper mainSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url('images/slider-1.jpg');">
+            <h3>Гидравлическое оборудование</h3>
+            <p>Гидравлические станции</p>
+            <p>Гидравлические помпы</p>
+          </div>
+          <div class="swiper-slide" style="background-image: url('images/slider-2.jpg');">
+            <h3>Электрические насосы</h3>
+          </div>
+          <div class="swiper-slide" style="background-image: url('images/slider-3.jpg');">
+            <h3>Водоотведение</h3>
+          </div>
+          <div class="swiper-slide" style="background-image: url('images/slider-4.jpg');">
+            <h3>Перекачка канализации</h3>
+          </div>
+          <div class="swiper-slide" style="background-image: url('images/slider-5.jpg');">
+            <h3>Запасные части и рукавные соединения</h3>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/template/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/template/js/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mainSwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url(../fonts/HelveticaNeueCyrItalic.woff2);
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr';
+  src: url(../fonts/HelveticaNeueCyr.woff2);
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-stack-medium: 'HelveticaNeueCyr';
+$font-size: 20px;
+$line-height: normal;
+$font-weight: 400;
+$body-color: #3b3b3b;
+$body: #ffffff;
+
+$white: #ffffff !default;
+$primary-red: #c40d0d !default;
+$primary-black: #3b3b3b !default;
+$primary-black-2: #1e1e1e !default;
+$primary-gray: #919191 !default;
+
+@mixin transition($transition) {
+  -moz-transition: all $transition ease;
+  -o-transition: all $transition ease;
+  -webkit-transition: all $transition ease;
+  -ms-transition: all $transition ease;
+  transition: all $transition ease;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}

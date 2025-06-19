@@ -1,0 +1,20 @@
+body {
+  font-family: $font-stack-medium;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  background-color: $body;
+  color: $body-color;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+}
+.padding-left-right-body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.section {
+  padding-left: 20px;
+  padding-right: 20px;
+}

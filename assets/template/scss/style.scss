@@ -1,0 +1,9 @@
+//sass --watch scss/style.scss css/style.css
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/variables';
+@import '_variables';
+@import '_reset';
+@import '_swiper';
+@import '_button';
+@import '_header';
+@import '_main';

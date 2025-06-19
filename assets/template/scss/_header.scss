@@ -1,0 +1,82 @@
+header {
+  padding-top: 48px;
+  padding-bottom: 30px;
+  .row-first {
+    margin-bottom: 32px;
+  }
+  .wrap-logo {
+    display: flex;
+    gap: 21px;
+    align-items: center;
+    .logo {
+      color: $primary-red;
+      font-family: $font-stack-medium;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .text {
+      color: $primary-black-2;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 19.2px */
+      letter-spacing: 0.32px;
+      display: inline-block;
+      max-width: 287px;
+    }
+  }
+  .wrap-info {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: flex-end;
+    .wrap-btn {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+  }
+  .email {
+    color: $primary-red;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    @include transition(0.3s);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .phone {
+    color: $primary-black;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 130%;
+    text-decoration: none;
+    @include transition(0.3s);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .wrap-red-menu {
+    display: flex;
+    gap: 12px 1px;
+    align-items: center;
+    .btn {
+      display: inline-flex;
+      height: 49px;
+      padding: 8px 34px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      @include border-radius(32px);
+    }
+  }
+}
