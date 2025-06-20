@@ -11,10 +11,26 @@ body {
   min-height: 100vh;
 }
 .padding-left-right-body {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  @include media-breakpoint-up(md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .section {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  @include media-breakpoint-up(md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

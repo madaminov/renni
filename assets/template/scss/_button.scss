@@ -35,8 +35,8 @@
 }
 .btn-bar {
   padding: 0;
-  width: 100px;
-  height: 49px;
+  width: 80px;
+  height: 40px;
   border: none;
   padding: 0;
   background-color: $primary-black-2;
@@ -51,6 +51,26 @@
   &.active {
     background-color: $primary-red;
   }
+  @include media-breakpoint-up(md) {
+    width: 80px;
+    height: 43px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 80px;
+    height: 45px;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 80px;
+    height: 45px;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 90px;
+    height: 47px;
+  }
+  @media #{$big_screen} {
+    width: 100px;
+    height: 49px;
+  }
 }
 .btn {
   color: $white;
@@ -59,7 +79,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  padding: 10px 16px;
+  height: 40px;
+  padding: 10px 12px;
   border-radius: 24px;
   background-color: $primary-black-2;
   border: 1px solid $primary-black-2;
@@ -67,18 +88,28 @@
   @include transition(0.3s);
   @include media-breakpoint-up(md) {
     font-size: 14px;
+    height: 40px;
+    padding: 10px 12px;
   }
   @include media-breakpoint-up(lg) {
-    font-size: 16px;
+    font-size: 14px;
+    height: 40px;
+    padding: 10px 12px;
   }
   @include media-breakpoint-up(xl) {
     font-size: 16px;
+    height: 40px;
+    padding: 10px 14px;
   }
   @include media-breakpoint-up(xxl) {
     font-size: 18px;
+    height: 40px;
+    padding: 10px 16px;
   }
   @media #{$big_screen} {
     font-size: 20px;
+    height: 42px;
+    padding: 10px 16px;
   }
 }
 .btn-outline-secondary {

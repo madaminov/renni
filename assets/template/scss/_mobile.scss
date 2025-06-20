@@ -1,0 +1,86 @@
+.section-mobile {
+  position: absolute;
+  z-index: 10;
+  background: $white;
+  width: 100%;
+  height: 100dvh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  left: -100%;
+  transition: all 0.3s ease;
+  &.open {
+    left: 0;
+  }
+  .btn-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  nav {
+    margin-bottom: 32px;
+  }
+  .wrap-red-menu {
+    margin-bottom: 32px;
+  }
+  .wrap-phone-email {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    li {
+      color: $primary-black;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      a {
+        color: $primary-black;
+        text-decoration: none;
+        &:hover {
+          color: $primary-red;
+        }
+      }
+
+      &.active {
+        a {
+          color: $primary-red;
+        }
+      }
+    }
+  }
+  .email {
+    color: $primary-red;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    @include transition(0.3s);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .phone {
+    color: $primary-black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 130%;
+    text-decoration: none;
+    @include transition(0.3s);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
