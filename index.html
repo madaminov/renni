@@ -141,6 +141,126 @@
 
     </div>
   </section>
+  <section class="section section-catalog-pump">
+    <div class="container-fluid">
+      <div class="row gap-3 gap-md-0">
+        <div class="col-12 col-md-6">
+          <h2>Супер мощные насосы</h2>
+        </div>
+        <div class="col-12 col-md-6 text-end">
+          <a href="#" class="btn btn-primary btn-lg">Перейти в каталог</a>
+        </div>
+      </div>
+      <div class="swiper catalogSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="item">
+              <div class="wrap-img" style="background-image: url(images/kns.png);"></div>
+              <h3><a href="">КНС</a></h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <div class="wrap-img" style="background-image: url(images/vodoponizhenie.png)"></div>
+              <h3><a href="">Водопонижение</a></h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <div class="wrap-img" style="background-image: url(images/vodootvedenie.png)"></div>
+              <h3><a href="">Водоотведение</a></h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <div class="wrap-img" style="background-image: url(images/dlya-gornoj-promyshlennosti.png)"></div>
+              <h3><a href="">Для горной промышленности (песковые)</a></h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <div class="wrap-img" style="background-image: url(images/avarijnye-nasosy.png)"></div>
+              <h3><a href="">Аварийные насосы</a></h3>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="item">
+              <div class="wrap-img" style="background-image: url(images/mekhanicheskie-uplotneniya.png)"></div>
+              <h3><a href="">Механические уплотнения под все типы насосов</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-main-about">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-6 col-xxl-4">
+          <div class="wrap-text-one">
+            <h2>ООО «РЕННИ-ТЕХ» работает на рынке Санкт-Петербурга с 2008 года</h2>
+            <p><a href="" class="btn-outline-arrow-right ">О компании</a></p>
+            <p>Целью нашей компании является предоставление потребителям качественной насосной и строительной техники и
+              современного уровня ее обслуживания</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 col-xxl-4">
+          <div class="wrap-img" style="background-image: url(images/about.png);"></div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-12 col-xxl-4">
+          <div class="wrap-text-two">
+            <p>На данный момент РЕННИ-ТЕХ включает в себя все направления по водоотведению и водопонижению грунтовых вод
+              и
+              по перекачке вод: дренажные и сточные воды, нефтешлам, буровые растворы, пескосодержащие и агрессивные
+              жидкости, а также современное навесное и строительное оборудование.</p>
+            <p>Осуществляем поставку запасных частей на предлагаемое оборудование. Предлагаем оборудование в АРЕНДУ.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-projects-videos">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="row gap-3 gap-md-0">
+            <div class="col-12 col-md-6">
+              <h2>Наши проекты</h2>
+            </div>
+            <div class="col-12 col-md-6">
+              <a href="#" class="btn btn-primary btn-lg">Другие проекты</a>
+            </div>
+          </div>
+          <div class="wrap-project-main">
+            <div class="wrap-img">
+              <a href="">
+                <img src="images/projects.png" class="img-fluid" />
+              </a>
+            </div>
+            <div class="wrap-text">
+              <div class="text">
+                <div class="tags">
+                  <div class="tag">Водоотведение</div>
+                </div>
+                <h3>Ленинградская область, Кронштадт. Водоотведение: Подъем затонувших кораблей.</h3>
+                <p>Постоянно растущий парк техники позволяет выполнять всё более сложные задачи по водопонижению,
+                  перекачке действующей канализации и аварийному водоотведению больших объемов.</p>
+                <div class="wrap-more mt-auto">
+                  <a class="link">читать подробнее</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="assets/template/js/bootstrap.bundle.min.js"></script>
   <script src="assets/template/js/swiper-bundle.min.js"></script>
   <script src="assets/template/js/main.js"></script>
@@ -192,6 +312,38 @@
       console.log(numb)
     }
 
+  </script>
+  <script>
+    var catalogSwiper = new Swiper(".catalogSwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+        1400: {
+          slidesPerView: 6,
+          spaceBetween: 10,
+        },
+      },
+    });
   </script>
 </body>
 

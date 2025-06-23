@@ -84,6 +84,9 @@
   border-radius: 24px;
   background-color: $primary-black-2;
   border: 1px solid $primary-black-2;
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
   @include border-radius(24px);
   @include transition(0.3s);
   @include media-breakpoint-up(md) {
@@ -112,6 +115,57 @@
     padding: 10px 16px;
   }
 }
+.btn-lg {
+  padding: 10px 14px;
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+    height: 40px;
+    padding: 10px 16px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+    height: 40px;
+    padding: 12px 18px;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+    height: 40px;
+    padding: 12px 20px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 18px;
+    height: 40px;
+    padding: 14px 22px;
+  }
+  @media #{$big_screen} {
+    font-size: 20px;
+    height: 42px;
+    padding: 14px 24px;
+  }
+}
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+  color: $white;
+  background-color: $primary-red;
+  border-color: $primary-red;
+}
+.btn-primary {
+  border-radius: 24px;
+  background-color: $primary-black-2;
+  border: 1px solid $primary-black-2;
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: $primary-red;
+    border-color: $primary-red;
+  }
+  &:disabled {
+    background-color: $primary-gray;
+  }
+}
 .btn-outline-secondary {
   color: $primary-black-2;
   border: 1px solid $primary-gray;
@@ -125,6 +179,7 @@
     background-color: $primary-gray;
   }
 }
+
 .btn-danger {
   color: $white;
   background: $primary-red;
@@ -136,5 +191,107 @@
   }
   &:disabled {
     background-color: $primary-gray;
+  }
+}
+.btn-outline-arrow-right {
+  color: $primary-black-2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none !important;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 0px 32px;
+  padding: 6px 6px 6px 24px;
+  width: auto;
+  background-color: $white;
+  border: 1px solid $primary-gray;
+  @include border-radius(64px);
+  @include transition(0.3s);
+
+  &::after {
+    content: '';
+    display: block;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: $primary-black-2;
+    background-position: center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgOEMwLjY5ODE4MiA4IDEwLjk1NzYgOCAxNiA4TTE2IDhMOS4zMDkwOSAxTTE2IDhMOS4zMDkwOSAxNSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=');
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    padding: 6px 6px 6px 28px;
+    &::after {
+      width: 40px;
+      height: 40px;
+      background-size: 15px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+    padding: 6px 6px 6px 28px;
+    &::after {
+      width: 45px;
+      height: 45px;
+      background-size: 18px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 20px;
+    padding: 6px 6px 6px 30px;
+    &::after {
+      width: 50px;
+      height: 50px;
+      background-size: 20px;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 20px;
+    padding: 6px 6px 6px 30px;
+    &::after {
+      width: 60px;
+      height: 60px;
+      background-size: 20px;
+    }
+  }
+  @media #{$big_screen} {
+    font-size: 22px;
+    padding: 6px 6px 6px 32px;
+    &::after {
+      width: 65px;
+      height: 65px;
+      background-size: 20px;
+    }
+  }
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: $primary-black-2;
+    border-color: $primary-black-2;
+    &:after {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-duration: var(--animate-duration);
+      animation-duration: var(--animate-duration);
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: pulse;
+      animation-name: pulse;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+    }
+  }
+  &:disabled {
+    color: $primary-gray;
+    background-color: $primary-gray;
+    border-color: $primary-gray;
   }
 }

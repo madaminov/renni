@@ -1,0 +1,75 @@
+.section-catalog-pump {
+  margin-top: 80px;
+  h2 {
+    color: $primary-black;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 43.2px */
+    margin-bottom: 0px;
+    @include media-breakpoint-up(md) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 34px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 36px;
+    }
+  }
+  .catalogSwiper {
+    margin-top: 37px;
+  }
+}
+.catalogSwiper {
+  .item {
+    cursor: pointer;
+    .wrap-img {
+      width: 100%;
+      height: 286px;
+      border-radius: 32px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 25px;
+    }
+    h3 {
+      color: $primary-black;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 0;
+      @include media-breakpoint-up(md) {
+        font-size: 18px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 20px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 20px;
+      }
+      @include media-breakpoint-up(xxl) {
+        font-size: 22px;
+      }
+      a {
+        color: $primary-black;
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      a {
+        color: $primary-red;
+      }
+    }
+  }
+  .swiper-wrapper {
+    margin-bottom: 20px;
+  }
+  .swiper-pagination {
+    position: relative;
+  }
+}
