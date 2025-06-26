@@ -10,6 +10,10 @@ body {
   flex-wrap: nowrap;
   min-height: 100vh;
 }
+.g-6,
+.gx-6 {
+  --bs-gutter-x: 3.5rem;
+}
 .padding-left-right-body {
   padding-left: 0px;
   padding-right: 0px;

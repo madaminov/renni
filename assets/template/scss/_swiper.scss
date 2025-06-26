@@ -276,12 +276,18 @@
   --swiper-navigation-color: var(--swiper-theme-color);
   */
 }
+
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: var(--swiper-navigation-top-offset, 50%);
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
-  height: var(--swiper-navigation-size);
+  top: calc(50% - 29px);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDhDMTcuMzAxOCA4IDcuMDQyNDIgOCAyIDhNMiA4TDguNjkwOTEgMU0yIDhMOC42OTA5MSAxNSIgc3Ryb2tlPSIjMzgzODM4IiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
   cursor: pointer;
@@ -289,12 +295,21 @@
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  transition: all 0.3s ease;
+}
+.swiper-button-next {
+  transform: rotate(180deg);
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
   opacity: 0.35;
   cursor: auto;
   pointer-events: none;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: $primary-black-2;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDhDMTcuMzAxOCA4IDcuMDQyNDIgOCAyIDhNMiA4TDguNjkwOTEgMU0yIDhMOC42OTA5MSAxNSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==');
 }
 .swiper-button-prev.swiper-button-hidden,
 .swiper-button-next.swiper-button-hidden {
@@ -333,12 +348,7 @@
 /* Navigation font start */
 .swiper-button-prev:after,
 .swiper-button-next:after {
-  font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
-  text-transform: none !important;
-  letter-spacing: 0;
-  font-variant: initial;
-  line-height: 1;
+  display: none;
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {

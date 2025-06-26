@@ -15,6 +15,9 @@ header {
     gap: 0px 21px;
     align-items: center;
     flex-wrap: wrap;
+    @include media-breakpoint-up(xxl) {
+      flex-wrap: nowrap;
+    }
     .logo {
       color: $primary-red;
       font-family: $font-stack-medium;
@@ -24,6 +27,7 @@ header {
       line-height: normal;
       text-transform: uppercase;
       text-decoration: none;
+      flex: 0 0 auto;
       @include media-breakpoint-up(md) {
         font-size: 30px;
       }
@@ -34,7 +38,7 @@ header {
         font-size: 34px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 36px;
+        font-size: 34px;
       }
       @media #{$big_screen} {
         font-size: 38px;

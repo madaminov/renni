@@ -1,0 +1,198 @@
+::placeholder {
+  color: $primary-gray;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+  font-weight: 400;
+}
+textarea.form-control {
+  min-height: 120px;
+}
+.form-group {
+  margin-bottom: 32px;
+  label {
+    color: $primary-black;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    margin-bottom: 10px;
+    .form-text {
+      color: $primary-gray;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 20px;
+    }
+    @media #{$big_screen} {
+      font-size: 20px;
+    }
+  }
+  .form-text-under {
+    color: $primary-gray;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 26px */
+    padding-left: 20px;
+    margin-top: 8px;
+    display: inline-block;
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 16px;
+    }
+    @media #{$big_screen} {
+      font-size: 16px;
+    }
+  }
+}
+.form-control {
+  color: $primary-black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 19px 20px;
+  appearance: none;
+  background-color: $white;
+  background-clip: padding-box;
+  border-radius: 32px;
+  border: 1px solid $primary-gray;
+  outline: none !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:hover {
+    border-color: $primary-red;
+  }
+  &:focus {
+    color: $primary-black;
+    background-color: $white;
+    border-color: $primary-red;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.form-control-file {
+  position: relative;
+  &::file-selector-button {
+    font-size: 14px;
+    line-height: 10px;
+    display: flex;
+    height: 42px;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: $white;
+    margin: 0;
+    background-color: $primary-black-2;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: var(--bs-border-width);
+    border-radius: 24px;
+
+    position: absolute;
+    right: 20px;
+    top: 9px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      color: $white;
+      border: 0;
+      background-color: $primary-red;
+    }
+    &:focus {
+      color: $white;
+      background-color: $primary-red;
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+  &:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: $primary-red;
+  }
+}
+.form-group-check {
+  display: flex;
+  gap: 19px;
+  flex-direction: column;
+}
+.form-check {
+  width: 100%;
+  label {
+    margin-bottom: 0;
+    color: $primary-gray;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 20.8px */
+    @include media-breakpoint-up(md) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 14px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 16px;
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: 16px;
+    }
+    @media #{$big_screen} {
+      font-size: 16px;
+    }
+    a {
+      color: $primary-gray;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+  }
+}
+
+.form-check-input[type='checkbox'] {
+  border-radius: 8px;
+}
+.form-check-input {
+  width: 24px;
+  height: 24px;
+  margin-top: 0px;
+  margin-right: 13px;
+  border: 1px solid $primary-gray;
+  &:checked {
+    background-color: $primary-red;
+    border-color: $primary-red;
+  }
+  &:focus {
+    border-color: $primary-red;
+    outline: 0;
+    box-shadow: none;
+  }
+}
