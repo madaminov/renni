@@ -10,10 +10,47 @@ body {
   flex-wrap: nowrap;
   min-height: 100vh;
 }
-.g-6,
+::-webkit-resizer {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-button {
+  background-image: url();
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: $primary-gray;
+  height: 80px;
+}
+
+::-webkit-scrollbar-track {
+  background: $white;
+}
 .gx-6 {
   --bs-gutter-x: 3.5rem;
 }
+.gy-6 {
+  --bs-gutter-y: 1.75rem;
+}
+.gx-28 {
+  --bs-gutter-x: 28px;
+}
+.gy-28 {
+  --bs-gutter-y: 28px;
+}
+
 .padding-left-right-body {
   padding-left: 0px;
   padding-right: 0px;

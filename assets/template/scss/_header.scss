@@ -1,6 +1,11 @@
+.body-main {
+  header {
+    padding-bottom: 30px;
+  }
+}
 header {
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   @include media-breakpoint-up(md) {
     padding-top: 30px;
   }
@@ -8,7 +13,10 @@ header {
     padding-top: 48px;
   }
   .row-first {
-    margin-bottom: 32px;
+    margin-bottom: 0px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 32px;
+    }
   }
   .wrap-logo {
     display: flex;

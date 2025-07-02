@@ -163,7 +163,13 @@
   }
 }
 .section-main-about {
-  margin-top: 120px;
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 80px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 120px;
+  }
   .row {
     gap: 36px 0px;
   }
@@ -246,7 +252,13 @@
   }
 }
 .section-projects-videos {
-  margin-top: 150px;
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 80px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 150px;
+  }
   h2 {
     color: $primary-black;
     font-size: 28px;
@@ -397,7 +409,13 @@
   }
 }
 .section-main-partners {
-  margin-top: 150px;
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 80px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 150px;
+  }
   .wrap-slider {
     width: 100%;
     display: flex;
@@ -412,7 +430,13 @@
     top: 0;
   }
   .text {
-    margin-top: 74px;
+    margin-top: 40px;
+    @include media-breakpoint-up(md) {
+      margin-top: 60px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 74px;
+    }
     h2 {
       color: $primary-black;
       font-size: 28px;
@@ -473,7 +497,10 @@
   }
 }
 .section-write-us {
-  margin-top: 80px;
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 80px;
+  }
   .wrap-write-us {
     padding: 32px 15px;
     background-color: $white;

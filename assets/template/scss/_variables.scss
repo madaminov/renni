@@ -22,7 +22,10 @@ $white: #ffffff !default;
 $primary-red: #c40d0d !default;
 $primary-black: #383838 !default;
 $primary-black-2: #1e1e1e !default;
+$primary-black-3: #222222 !default;
+$primary-black-4: #3b3b3b !default;
 $primary-gray: #919191 !default;
+$primary-gray-2: #f1f1f1 !default;
 
 @mixin transition($transition) {
   -moz-transition: all $transition ease;

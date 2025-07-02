@@ -49,3 +49,31 @@ document
   });
 
 Fancybox.bind('[data-fancybox]');
+document.querySelectorAll('.popover-container').forEach((box) => {
+  box.classList.add('popover-active');
+});
+document.querySelectorAll('.popover-shower .btn-close').forEach((box) => {
+  box.addEventListener('click', function (event) {
+    event.target
+      .closest('.popover-container')
+      .classList.remove('popover-active');
+  });
+});
+document.querySelectorAll('.wrap-childCategory .link-red').forEach((box) => {
+  box.addEventListener('click', function (event) {
+    wrapChildCategory = event.target.closest('.wrap-childCategory');
+    if (wrapChildCategory.classList.contains('open')) {
+      wrapChildCategory.classList.remove('open');
+      event.target.textContent = 'Развернуть категории';
+    } else {
+      wrapChildCategory.classList.add('open');
+      event.target.textContent = 'Свернуть категории';
+    }
+  });
+});
+$(function () {
+  var $select = $('.form__select');
+  if ($select.length) {
+    $select.niceSelect();
+  }
+});
