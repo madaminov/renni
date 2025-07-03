@@ -233,6 +233,14 @@
       background-color: $primary-red;
       border-color: $primary-gray;
     }
+    &.black {
+      background-color: $primary-black-2;
+      border: none;
+      &:hover {
+        background-color: $primary-red;
+        border-color: $primary-red;
+      }
+    }
   }
 }
 .dropdown-toggle {

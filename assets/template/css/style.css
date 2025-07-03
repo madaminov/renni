@@ -17021,7 +17021,7 @@ button.swiper-pagination-bullet {
   gap: 0px 32px;
   padding: 6px 6px 6px 24px;
   width: auto;
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid #919191;
   -webkit-border-radius: 64px;
   -moz-border-radius: 64px;
@@ -19449,7 +19449,7 @@ h1, .h1 {
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 50.4px */
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 @media (min-width: 768px) {
   h1, .h1 {
@@ -20660,6 +20660,128 @@ h1, .h1 {
   }
 }
 
+.section-contacts {
+  margin-top: 50px;
+}
+.section-contacts .block-contacts .name {
+  color: #383838;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 50.4px */
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .section-contacts .block-contacts .name {
+    font-size: 32px;
+    margin-bottom: 42px;
+  }
+}
+@media (min-width: 992px) {
+  .section-contacts .block-contacts .name {
+    font-size: 34px;
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-contacts .block-contacts .name {
+    font-size: 42px;
+    margin-bottom: 87px;
+  }
+}
+.section-contacts .block-contacts .address {
+  color: #383838;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 38.4px */
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .section-contacts .block-contacts .address {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .section-contacts .block-contacts .address {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-contacts .block-contacts .address {
+    font-size: 32px;
+    margin-bottom: 47px;
+  }
+}
+.section-contacts .block-contacts .wrap-phone-email {
+  margin-bottom: 36px;
+  display: flex;
+  gap: 11px;
+  flex-direction: column;
+}
+.section-contacts .block-contacts .phone {
+  color: #383838;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 130%; /* 36.4px */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.section-contacts .block-contacts .phone:hover {
+  text-decoration: underline;
+}
+.section-contacts .block-contacts .email {
+  color: #c40d0d;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.section-contacts .block-contacts .email:hover {
+  text-decoration: underline;
+}
+.section-contacts .block-contacts .wrap-soc {
+  color: #383838;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  align-items: center;
+}
+.section-contacts .print-map {
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .section-contacts .print-map {
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .section-contacts .print-map {
+    margin-bottom: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-contacts .print-map {
+    margin-bottom: 65px;
+  }
+}
+.section-contacts img {
+  border-radius: 32px;
+}
+.section-contacts .map {
+  border-radius: 36px;
+  overflow: hidden;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -20949,6 +21071,14 @@ h1, .h1 {
 .soc a:hover {
   background-color: #c40d0d;
   border-color: #919191;
+}
+.soc a.black {
+  background-color: #1e1e1e;
+  border: none;
+}
+.soc a.black:hover {
+  background-color: #c40d0d;
+  border-color: #c40d0d;
 }
 
 .dropdown-toggle {
