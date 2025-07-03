@@ -1,7 +1,7 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 12px 15px;
 }
 .tag {
   color: $primary-black-2;
@@ -372,14 +372,20 @@
 .wrap-filters-control {
   display: flex;
   width: 100%;
-  padding: 24px 32px;
-  gap: 12px;
+  padding: 12px 15px;
+  gap: 12px 12px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   border-radius: 32px;
   background: $white;
+  @include media-breakpoint-up(md) {
+    padding: 24px 32px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 12px 24px;
+  }
   .form-group {
     margin-bottom: 0;
     width: calc(50% - 12px);
