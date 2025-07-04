@@ -79,6 +79,13 @@
       display: block;
       border-radius: 50%;
     }
+    &:hover {
+      border-color: $primary-red;
+      &::before {
+        content: '';
+        background-color: $primary-red;
+      }
+    }
     &.swiper-pagination-bullet-active {
       width: 24px;
       height: 24px;
