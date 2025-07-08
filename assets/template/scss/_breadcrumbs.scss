@@ -58,8 +58,17 @@
         font-size: 20px;
       }
     }
+    a {
+      color: $primary-black-2;
+      span {
+        color: $primary-black-2;
+      }
+    }
     a:hover {
       color: $primary-black;
+      span {
+        color: $primary-black;
+      }
     }
   }
 }

@@ -38,21 +38,74 @@ body {
 ::-webkit-scrollbar-track {
   background: $white;
 }
+.section {
+  padding-left: 0px;
+  padding-right: 0px;
+  @include media-breakpoint-up(md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .gx-6 {
   --bs-gutter-x: 3.5rem;
 }
 .gy-6 {
   --bs-gutter-y: 1.75rem;
 }
-.gx-28 {
-  --bs-gutter-x: 28px;
-}
+
 .gy-28 {
   --bs-gutter-y: 28px;
 }
+.gy-32 {
+  --bs-gutter-y: 32px;
+}
+.gx-28 {
+  --bs-gutter-x: 24px;
+  @include media-breakpoint-up(lg) {
+    --bs-gutter-x: 28px;
+  }
+}
+.gx-50 {
+  --bs-gutter-x: 24px;
+  @include media-breakpoint-up(lg) {
+    --bs-gutter-x: 50px;
+  }
+}
 .container-fluid-14 {
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 12px;
+  padding-right: 12px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+.container-fluid-25 {
+  padding-left: 12px;
+  padding-right: 12px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.section-pl-pr-18 {
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+.section-pl-pr-7 {
+  padding-left: 10px;
+  padding-right: 10px;
+  @include media-breakpoint-up(lg) {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
 }
 .padding-left-right-body {
   padding-left: 0px;
@@ -66,18 +119,15 @@ body {
     padding-right: 20px;
   }
 }
-.section {
-  padding-left: 0px;
-  padding-right: 0px;
-  @include media-breakpoint-up(md) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  @include media-breakpoint-up(lg) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
+
 .pagination {
   margin-top: 32px;
+}
+a {
+  color: $primary-red;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    text-decoration: underline;
+  }
 }
