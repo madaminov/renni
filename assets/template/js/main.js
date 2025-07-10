@@ -76,4 +76,12 @@ $(function () {
   if ($select.length) {
     $select.niceSelect();
   }
+  $('.scroll-el').on('click', function (e) {
+    e.preventDefault();
+    el = $(this).data('element');
+    if (el == undefined) {
+      el = $(this).attr('href');
+    }
+    $('body,html').animate({ scrollTop: $(el).offset().top - 100 }, 1500);
+  });
 });

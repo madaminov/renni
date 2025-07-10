@@ -455,10 +455,11 @@
   }
   h2 {
     color: $primary-black;
-    font-size: 28px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 43.2px */
+    margin-bottom: 0;
     @include media-breakpoint-up(md) {
       font-size: 30px;
     }

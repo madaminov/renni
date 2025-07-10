@@ -281,8 +281,8 @@
 .swiper-button-next {
   position: absolute;
   top: calc(50% - 29px);
-  width: 58px;
-  height: 58px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4IDhDMTcuMzAxOCA4IDcuMDQyNDIgOCAyIDhNMiA4TDguNjkwOTEgMU0yIDhMOC42OTA5MSAxNSIgc3Ryb2tlPSIjMzgzODM4IiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==');
   background-repeat: no-repeat;
@@ -296,6 +296,14 @@
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
   transition: all 0.3s ease;
+  @include media-breakpoint-up(md) {
+    width: 48px;
+    height: 48px;
+  }
+  @include media-breakpoint-up(lg) {
+    width: 58px;
+    height: 58px;
+  }
 }
 .swiper-button-next {
   transform: rotate(180deg);

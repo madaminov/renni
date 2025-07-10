@@ -75,6 +75,15 @@ body {
     --bs-gutter-x: 50px;
   }
 }
+.margin-top-80 {
+  margin-top: 40px !important;
+  @include media-breakpoint-up(md) {
+    margin-top: 60px !important;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-top: 80px !important;
+  }
+}
 .container-fluid-14 {
   padding-left: 12px;
   padding-right: 12px;

@@ -27,6 +27,12 @@
     border-color: $primary-gray-2;
     text-decoration: none;
   }
+  &.tag-black:hover {
+    color: $white;
+    background-color: $primary-black-2;
+    border-color: $primary-black-2;
+    text-decoration: none;
+  }
   @include media-breakpoint-up(md) {
     font-size: 18px;
   }
