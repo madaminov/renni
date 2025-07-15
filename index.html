@@ -4,6 +4,7 @@
 <head>
   <title>Ренни-Тех</title>
   <meta charset="utf-8">
+  <meta name="robots" content="noindex" />
   <meta name="description" content="Ренни-Тех" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="assets/template/css/fontawesome/css/all.min.css">
@@ -108,7 +109,7 @@
     <div class="container-fluid">
       <div class="swiper mainSwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" onclick="selectActiveSlider(0)">
+          <div class="swiper-slide" onclick="selectActiveSlider(0)" onmouseenter="selectActiveSliderHover(0)">
             <div class="item" style="background-image: url('images/slider-1.jpg');">
               <div class="wrap-active-no">
                 <h3>Гидравлическое оборудование</h3>
@@ -123,7 +124,7 @@
             </div>
 
           </div>
-          <div class="swiper-slide" onclick="selectActiveSlider(1)">
+          <div class="swiper-slide" onclick="selectActiveSlider(1)" onmouseenter="selectActiveSliderHover(1)">
             <div class="item" style="background-image: url('images/slider-2.jpg');">
               <div class="wrap-active-no">
                 <h3>Электрические насосы</h3>
@@ -133,7 +134,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" onclick="selectActiveSlider(2)">
+          <div class="swiper-slide" onclick="selectActiveSlider(2)" onmouseenter="selectActiveSliderHover(2)">
             <div class="item" style="background-image: url('images/slider-3.jpg');">
               <div class="wrap-active-no">
                 <h3>Водоотведение</h3>
@@ -143,7 +144,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" onclick="selectActiveSlider(3)">
+          <div class="swiper-slide" onclick="selectActiveSlider(3)" onmouseenter="selectActiveSliderHover(3)">
             <div class="item" style="background-image: url('images/slider-4.jpg');">
               <div class="wrap-active-no">
                 <h3>Перекачка канализации</h3>
@@ -153,7 +154,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide" onclick="selectActiveSlider(4)">
+          <div class="swiper-slide" onclick="selectActiveSlider(4)" onmouseenter="selectActiveSliderHover(4)">
             <div class="item" style="background-image: url('images/slider-5.jpg');">
               <div class="wrap-active-no">
                 <h3>Запасные части и рукавные соединения</h3>
@@ -612,6 +613,7 @@
   <script>
     var sliders = document.querySelectorAll('.mainSwiper .swiper-slide');
     var contSliders = document.querySelectorAll('.mainSwiper .swiper-slide').length;
+    var countPereat = 0;
     for (let i = 0; i < contSliders; i++) {
       divCounter = document.createElement("div");
       divCounter.setAttribute('data-index', i);
@@ -621,6 +623,7 @@
       }
       document.querySelector('.wrap-count-sliders').append(divCounter)
     }
+
     var mainSwiper = new Swiper(".mainSwiper", {
       slidesPerView: 1,
       spaceBetween: 0,
@@ -628,7 +631,7 @@
         768: {
           slidesPerView: 'auto',
           spaceBetween: 0,
-        }
+        },
       },
     });
     mainSwiper.on('slideChange', function () {
@@ -637,8 +640,20 @@
       })
       document.querySelector('.wrap-count-sliders div[data-index="' + mainSwiper.activeIndex + '"]').classList.add('active');
     });
+
     function selectActiveSlider(numb) {
       setActiveSlider(numb)
+      countPereat = numb;
+    }
+    function selectActiveSliderHover(numb) {
+      return false;
+      if (document.body.clientWidth < 1400) {
+        return false;
+      } else {
+        setActiveSlider(numb)
+        countPereat = numb;
+      }
+
     }
     function setActiveSlider(numb) {
       document.querySelectorAll('.mainSwiper .swiper-slide').forEach((box) => {
@@ -653,10 +668,28 @@
       if (document.body.clientWidth < 1400) {
         mainSwiper.slideTo(numb);
       }
-
       console.log(numb)
     }
 
+
+    function sliderAuto() {
+      if (document.body.clientWidth < 768) {
+        return false;
+      }
+      setTimeout(() => {
+        console.log(countPereat)
+        selectActiveSlider(countPereat);
+        sliderAuto();
+        if (countPereat == (contSliders - 1)) {
+          countPereat = 0;
+          console.log(countPereat);
+        } else {
+          countPereat++;
+        }
+
+      }, 5000);
+    }
+    sliderAuto();
   </script>
   <script>
     var catalogSwiper = new Swiper(".catalogSwiper", {
