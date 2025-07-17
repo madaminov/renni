@@ -182,6 +182,54 @@
     font-size: 16px;
   }
 }
+.link-sm {
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: 18px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 13px;
+    &::after {
+      width: 38px;
+      height: 38px;
+      background-size: 20px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 14px;
+    &::after {
+      width: 40px;
+      height: 40px;
+      background-size: 20px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 14px;
+    &::after {
+      width: 40px;
+      height: 40px;
+      background-size: 20px;
+    }
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 14px;
+    &::after {
+      width: 40px;
+      height: 40px;
+      background-size: 20px;
+    }
+  }
+  @media #{$big_screen} {
+    font-size: 14px;
+    &::after {
+      width: 40px;
+      height: 40px;
+      background-size: 20px;
+    }
+  }
+}
 .wrap-tabs {
   display: inline-flex;
   flex-wrap: wrap;
@@ -580,5 +628,28 @@
   }
   @include media-breakpoint-up(lg) {
     padding: 32px;
+  }
+}
+.wrap-rekvizit {
+  border-radius: 32px;
+  border: 1px solid $primary-gray;
+  padding: 15px;
+  margin-bottom: 36px;
+  @include media-breakpoint-up(md) {
+    padding: 30px 24px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 36px 32px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+  table tr:first-child td {
+    padding-top: 14px;
+    border-top: 1px solid $primary-gray;
+  }
+  table td {
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 }

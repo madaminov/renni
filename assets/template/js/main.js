@@ -59,6 +59,22 @@ document.querySelectorAll('.popover-shower .btn-close').forEach((box) => {
       .classList.remove('popover-active');
   });
 });
+if (document.querySelector('li[data-li="15"]')) {
+  document
+    .querySelector('li[data-li="15"]')
+    .classList.add('d-none', 'd-xxl-block');
+}
+if (document.querySelector('li[data-li="16"]')) {
+  document
+    .querySelector('li[data-li="16"]')
+    .classList.add('d-none', 'd-xxl-block');
+}
+if (document.querySelector('li[data-li="19"]')) {
+  document
+    .querySelector('li[data-li="19"]')
+    .classList.add('d-none', 'd-xxl-block');
+}
+
 document.querySelectorAll('.wrap-childCategory .link-red').forEach((box) => {
   box.addEventListener('click', function (event) {
     wrapChildCategory = event.target.closest('.wrap-childCategory');

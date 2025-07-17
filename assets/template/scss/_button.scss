@@ -662,3 +662,16 @@
     background-repeat: no-repeat;
   }
 }
+.btn-copy {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxMyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMS4wNzkxIiB5PSIzLjg2OTE0IiB3aWR0aD0iOC40NzM2OCIgaGVpZ2h0PSIxMS42MzE2IiBzdHJva2U9IiM5MTkxOTEiLz4KPHBhdGggZD0iTTIuOTQ3MjcgNC4xNTc4OVYxSDEyLjQyMVYxMy42MzE2SDEwLjA1MjUiIHN0cm9rZT0iIzkxOTE5MSIvPgo8L3N2Zz4K');
+  background-position: center;
+  background-repeat: no-repeat;
+  &:hover {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxMyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMS4wNzkxIiB5PSIzLjg2OTE0IiB3aWR0aD0iOC40NzM2OCIgaGVpZ2h0PSIxMS42MzE2IiBzdHJva2U9IiNjNDBkMGQiLz4KPHBhdGggZD0iTTIuOTQ3MjcgNC4xNTc4OVYxSDEyLjQyMVYxMy42MzE2SDEwLjA1MjUiIHN0cm9rZT0iI2M0MGQwZCIvPgo8L3N2Zz4K');
+  }
+}

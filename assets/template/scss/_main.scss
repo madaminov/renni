@@ -11,13 +11,13 @@
   .swiper-slide {
     width: 100% !important;
     @include media-breakpoint-up(md) {
-      width: calc(35%) !important;
+      width: 50% !important;
     }
     @include media-breakpoint-up(lg) {
-      width: calc(25%) !important;
+      width: 50% !important;
     }
     @include media-breakpoint-up(xl) {
-      width: calc(20%) !important;
+      width: 15% !important;
     }
     @include media-breakpoint-up(xxl) {
       width: calc(15%) !important;
@@ -86,6 +86,14 @@
       position: relative;
       z-index: 2;
       transition: all 0.3s ease;
+      @include media-breakpoint-up(xl) {
+        opacity: 0;
+        font-size: 22px;
+      }
+      @include media-breakpoint-up(xxl) {
+        opacity: 1;
+        font-size: 24px;
+      }
     }
     .ul-child {
       display: flex;
@@ -124,13 +132,13 @@
     &.swiper-slide-active {
       width: 100% !important;
       @include media-breakpoint-up(md) {
-        width: calc(65%) !important;
+        width: 50% !important;
       }
       @include media-breakpoint-up(lg) {
-        width: calc(50%) !important;
+        width: 50% !important;
       }
       @include media-breakpoint-up(xl) {
-        width: calc(40%) !important;
+        width: 40% !important;
       }
       @include media-breakpoint-up(xxl) {
         width: calc(40%) !important;
@@ -143,6 +151,9 @@
         opacity: 1;
         transform: translate(0, 0);
         transition: all 0.3s ease;
+      }
+      h3 {
+        opacity: 1;
       }
     }
   }

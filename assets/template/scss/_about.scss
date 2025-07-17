@@ -1,0 +1,115 @@
+.section-about-page {
+  margin-top: 50px;
+  .wrap-share-tags {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-bottom: 76px;
+    .wrap-share,
+    .wrap-tags {
+      width: 100%;
+      @include media-breakpoint-up(xl) {
+        margin-left: calc(25% + 32px);
+        margin-right: 40px;
+        width: calc(50% - 32px - 40px);
+        order: 1;
+      }
+      @include media-breakpoint-up(xxl) {
+        margin-left: calc(30% + 32px);
+        margin-right: 85px;
+        width: calc(43% - 32px - 85px);
+      }
+      @media #{$big_screen} {
+        width: calc(39% - 32px - 85px);
+        margin-left: calc(32% + 32px);
+      }
+    }
+  }
+}
+.row-content-about {
+  padding-bottom: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 0px;
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 0px;
+  }
+  .col-images {
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 auto;
+    order: 1;
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      order: 1;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 25%;
+      order: 0;
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 30%;
+    }
+    @media #{$big_screen} {
+      width: 32%;
+    }
+  }
+  .col-content {
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 auto;
+    order: 0;
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      order: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-left: 32px;
+      width: calc(75% - 30% - 32px);
+      order: 1;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-left: 32px;
+
+      width: calc(100% - 30% - 32px);
+    }
+    @media #{$big_screen} {
+      width: calc(100% - 32% - 32px);
+      margin-left: 32px;
+    }
+  }
+  .wrap-images {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 486px;
+      display: block;
+      border-radius: 32px;
+      @include media-breakpoint-up(xl) {
+        height: 380px;
+      }
+      @include media-breakpoint-up(xxl) {
+        height: 486px;
+      }
+    }
+  }
+  .wrap-img {
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 486px;
+      display: block;
+      border-radius: 32px;
+      @include media-breakpoint-up(xl) {
+        height: 380px;
+      }
+      @include media-breakpoint-up(xxl) {
+        height: 486px;
+      }
+    }
+  }
+}
