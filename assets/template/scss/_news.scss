@@ -256,6 +256,24 @@
       margin-left: 32px;
       margin-right: 85px;
     }
+    &.col-content-plus-videos {
+      @include media-breakpoint-up(xl) {
+        margin-left: 32px;
+        margin-right: 0px;
+        width: calc(50% - 32px - 0px + 25%);
+        order: 1;
+      }
+      @include media-breakpoint-up(xxl) {
+        margin-left: 32px;
+        margin-right: 0px;
+        width: calc(43% - 32px - 0px + 27%);
+      }
+      @media #{$big_screen} {
+        width: calc(39% - 32px - 0px + 29%);
+        margin-left: 32px;
+        margin-right: 0px;
+      }
+    }
   }
   .col-videos {
     max-width: 100%;

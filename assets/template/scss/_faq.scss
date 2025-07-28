@@ -2,6 +2,11 @@
   margin-top: 50px;
   .wrap-filter {
     margin-bottom: 32px;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
     .tag {
       &:hover,
       &.active {
@@ -215,6 +220,7 @@
   @include media-breakpoint-up(xl) {
     gap: 32px;
   }
+  margin-bottom: 36px;
   .col-images {
     max-width: 100%;
     width: 100%;

@@ -407,10 +407,25 @@
     margin-top: 39px;
     img {
       border-radius: 32px;
+      filter: brightness(80%);
+    }
+    .icon {
+      background: $primary-red;
+      border-radius: 12px;
+      width: 60px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: calc(50% - 20px);
+      right: calc(50% - 30px);
+      z-index: 2;
+      i {
+        color: $white;
+      }
     }
     h3 {
-      color: var(--grey-text, #383838);
-      font-family: HelveticaNeueCyr;
+      color: $primary-black;
       font-size: 24px;
       font-style: normal;
       font-weight: 400;
@@ -494,6 +509,11 @@
   }
 }
 .partnersSwiper {
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
   img {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);

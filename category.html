@@ -1138,27 +1138,7 @@
     const popover = new bootstrap.Popover(popoverShower);
     popover.show();
   </script>
-  <script>
-    let sliderPreview = {
-      productPreviewImages: '',
-      run: function () {
-        this.productPreviewImages = new Swiper('.product-preview-images', {
-          slidesPreView: 1,
-          spaceBetween: 0,
-          grabCursor: true,
-          loop: true,
-          pagination: { el: '.swiper-pagination', clickable: true },
-        });
-      },
-      update: function () {
-        this.productPreviewImages.forEach((element) => {
-          element.destroy();
-        });
-        this.run();
-      },
-    };
-    sliderPreview.run();
-  </script>
+
   <script>
     var viewProductButton = document.querySelectorAll('.wrap-view-product button');
     viewProductButton.forEach((box) => {

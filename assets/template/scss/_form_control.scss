@@ -140,6 +140,9 @@ textarea.form-control {
   display: flex;
   gap: 19px;
   flex-direction: column;
+  label {
+    margin-bottom: 0;
+  }
 }
 .form-check {
   width: 100%;

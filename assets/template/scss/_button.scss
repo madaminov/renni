@@ -48,6 +48,7 @@
   @include border-radius(24px);
   @include transition(0.3s);
   text-decoration: none !important;
+  position: relative;
   &:hover,
   &:active,
   &.active {
@@ -72,6 +73,10 @@
   @media #{$big_screen} {
     width: 100px;
     height: 49px;
+  }
+  &.open {
+    z-index: 4;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwyMy42Mjc0IDIzLjYyNzQiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8cGF0aCBkPSJNMjMuNjI3NCAxTDEuMDAwMDIgMjMuNjI3NCIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=');
   }
 }
 .btn {
@@ -673,5 +678,116 @@
   background-repeat: no-repeat;
   &:hover {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxMyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMS4wNzkxIiB5PSIzLjg2OTE0IiB3aWR0aD0iOC40NzM2OCIgaGVpZ2h0PSIxMS42MzE2IiBzdHJva2U9IiNjNDBkMGQiLz4KPHBhdGggZD0iTTIuOTQ3MjcgNC4xNTc4OVYxSDEyLjQyMVYxMy42MzE2SDEwLjA1MjUiIHN0cm9rZT0iI2M0MGQwZCIvPgo8L3N2Zz4K');
+  }
+}
+
+$borderW: 2px;
+.water-btn {
+  $numOfBlobs: 4;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  color: $white;
+  background-color: $primary-red;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 32px;
+  .title {
+    position: relative;
+    z-index: 3;
+  }
+
+  // &:before {
+  //   content: '';
+  //   z-index: 1;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   border: $borderW solid $cyan;
+  //   border-radius: 32px;
+  //   background-color: $primary-red;
+  // }
+
+  // &:after {
+  //   content: '';
+  //   z-index: -2;
+  //   position: absolute;
+  //   left: $borderW * 1.5;
+  //   top: $borderW * 1.5;
+  //   width: 100%;
+  //   height: 100%;
+  //   transition: all 0.3s 0.2s;
+  //   border-radius: 32px;
+  // }
+
+  // &:hover {
+  //   color: $dark;
+  //   border-radius: 32px;
+
+  //   &:after {
+  //     transition: all 0.3s;
+  //     left: 0;
+  //     top: 0;
+  //     border-radius: 30px;
+  //   }
+  // }
+
+  &__inner {
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background: $primary-red;
+  }
+
+  // additional container created, because in FF blobs are breaking overflow:hidden of element with svg gooey filter
+  &__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url('#goo');
+  }
+
+  &__blob {
+    position: absolute;
+    top: $borderW;
+    width: 100% / $numOfBlobs;
+    height: 100%;
+    background: $primary-black-2;
+    border-radius: 100%;
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    transition: transform 0.45s;
+
+    @supports (filter: url('#goo')) {
+      transform: translate3d(0, 150%, 0) scale(1.4);
+    }
+
+    @for $i from 1 through $numOfBlobs {
+      &:nth-child(#{$i}) {
+        left: ($i - 1) * (120% / $numOfBlobs);
+        transition-delay: ($i - 1) * 0.08s;
+      }
+    }
+
+    .water-btn:hover & {
+      transform: translateZ(0) scale(1.7);
+
+      @supports (filter: url('#goo')) {
+        transform: translateZ(0) scale(1.4);
+      }
+    }
+  }
+  &:hover {
+    .title {
+      color: $white;
+    }
   }
 }

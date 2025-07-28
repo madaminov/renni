@@ -1,4 +1,8 @@
 footer {
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 80px;
+  }
   color: $white;
   .wrap {
     border-radius: 52px;
@@ -254,12 +258,11 @@ footer {
   }
   .wrap-button {
     display: flex;
-    justify-content: end;
     align-items: center;
     gap: 16px;
     justify-content: center;
     @include media-breakpoint-up(md) {
-      justify-content: start;
+      justify-content: end;
     }
   }
   .address {
@@ -357,5 +360,11 @@ footer {
         }
       }
     }
+  }
+}
+.section-write-us + footer {
+  margin-top: 0px;
+  @include media-breakpoint-up(md) {
+    margin-top: 0px;
   }
 }

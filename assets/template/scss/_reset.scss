@@ -132,6 +132,9 @@ body {
 .pagination {
   margin-top: 32px;
 }
+.btn-pagination {
+  margin-top: 32px !important;
+}
 a {
   color: $primary-red;
   text-decoration: none;
@@ -139,4 +142,7 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+a[data-fancybox] {
+  text-decoration: none !important;
 }

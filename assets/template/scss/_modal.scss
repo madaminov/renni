@@ -1,0 +1,29 @@
+.modal {
+  .modal-content {
+    background-color: $white;
+    border-radius: 32px;
+    border: 1px solid $primary-gray;
+  }
+  .modal-title {
+    width: 100%;
+    text-align: center;
+  }
+  .modal-header {
+    padding: 24px 15px 0px 15px;
+    border-bottom: 0px;
+    @include media-breakpoint-up(md) {
+      padding: 36px 32px 0px 32px;
+    }
+    .btn-close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  }
+  .modal-body {
+    padding: 24px 15px 24px 15px;
+    @include media-breakpoint-up(md) {
+      padding: 36px 32px 36px 32px;
+    }
+  }
+}
