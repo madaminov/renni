@@ -58,7 +58,10 @@ body {
 }
 
 .gy-28 {
-  --bs-gutter-y: 28px;
+  --bs-gutter-y: 24px;
+  @include media-breakpoint-up(md) {
+    --bs-gutter-y: 28px;
+  }
 }
 .gy-32 {
   --bs-gutter-y: 32px;
@@ -101,16 +104,16 @@ body {
   }
 }
 .section-pl-pr-18 {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
   @include media-breakpoint-up(lg) {
     padding-left: 18px;
     padding-right: 18px;
   }
 }
 .section-pl-pr-7 {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
   @include media-breakpoint-up(lg) {
     padding-left: 7px;
     padding-right: 7px;

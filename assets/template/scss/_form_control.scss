@@ -10,7 +10,10 @@ textarea.form-control {
   min-height: 120px;
 }
 .form-group {
-  margin-bottom: 32px;
+  margin-bottom: 18px;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 32px;
+  }
   label {
     color: $primary-black;
     font-size: 14px;
@@ -65,14 +68,14 @@ textarea.form-control {
 }
 .form-control {
   color: $primary-black;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 20.8px */
   font-weight: 400;
   display: block;
   width: 100%;
-  padding: 19px 20px;
+  padding: 12px 15px;
   appearance: none;
   background-color: $white;
   background-clip: padding-box;
@@ -80,6 +83,10 @@ textarea.form-control {
   border: 1px solid $primary-gray;
   outline: none !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  @include media-breakpoint-up(md) {
+    font-size: 16px;
+    padding: 19px 20px;
+  }
   &:hover {
     border-color: $primary-red;
   }
@@ -95,11 +102,11 @@ textarea.form-control {
 .form-control-file {
   position: relative;
   &::file-selector-button {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 10px;
     display: flex;
-    height: 42px;
-    padding: 14px 24px;
+    height: 30px;
+    padding: 10px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -112,12 +119,16 @@ textarea.form-control {
     border-width: 0;
     border-inline-end-width: var(--bs-border-width);
     border-radius: 24px;
-
     position: absolute;
     right: 20px;
     top: 9px;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    @include media-breakpoint-up(md) {
+      height: 42px;
+      font-size: 14px;
+      padding: 14px 24px;
+    }
 
     &:hover {
       color: $white;

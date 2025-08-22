@@ -1,6 +1,7 @@
 .section-news {
   margin-top: 50px;
-  .wrap-sort {
+  .wrap-sort,
+  .wrap-filter {
     margin-bottom: 32px;
   }
 }
@@ -301,7 +302,7 @@
   .next,
   .prev {
     color: $primary-black;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;

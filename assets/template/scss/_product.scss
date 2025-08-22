@@ -11,9 +11,10 @@
   background: $white;
   position: relative;
   height: 100%;
-  padding: 15px;
+  padding: 16px;
   transition: all 0.3s ease;
   @include media-breakpoint-up(md) {
+    border-radius: 32px;
     padding: 24px;
   }
   @include media-breakpoint-up(lg) {
@@ -101,7 +102,6 @@
   }
   .description {
     width: 100%;
-    height: 100%;
     gap: 20px;
     display: flex;
     flex-direction: column;
@@ -187,8 +187,11 @@
       transition: all 0.3s ease;
       li {
         color: $primary-black;
-        padding: 14px 0px;
+        padding: 7px 0px;
         border-bottom: 1px solid $primary-gray;
+        @include media-breakpoint-up(md) {
+          padding: 14px 0px;
+        }
       }
     }
   }
@@ -199,7 +202,6 @@
     gap: 12px;
     align-self: stretch;
     flex-wrap: wrap;
-    margin-top: auto;
     transition: all 0.3s ease;
     .tag {
       color: $primary-gray;
@@ -244,6 +246,12 @@
     }
     .wrap-button {
       margin-top: auto;
+    }
+    .wrap-tags {
+      margin-top: auto;
+    }
+    .description {
+      height: 100%;
     }
   }
 }
@@ -895,6 +903,7 @@
   flex-direction: row;
   gap: 32px;
   flex-wrap: wrap;
+  margin-bottom: 36px;
   h4 {
     color: $primary-black;
     /* h4 */

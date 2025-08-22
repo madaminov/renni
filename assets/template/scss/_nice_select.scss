@@ -7,7 +7,6 @@
   clear: both;
   cursor: pointer;
   display: block;
-  float: left;
   font-family: inherit;
   font-size: 16px;
   font-weight: normal;
@@ -111,7 +110,7 @@
 .nice-select .list {
   width: 100%;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 32px;
   border: 1px solid $primary-gray;
   box-sizing: border-box;
   margin-top: 4px;
@@ -169,4 +168,7 @@
 
 .no-csspointerevents .nice-select.open .list {
   display: block;
+}
+.nice-select.form-control {
+  height: 60px;
 }

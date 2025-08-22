@@ -5,11 +5,14 @@
   }
   h2 {
     color: $primary-black;
-    font-size: 28px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 43.2px */
     margin-bottom: 0px;
+    @include media-breakpoint-up(sm) {
+      font-size: 22px;
+    }
     @include media-breakpoint-up(md) {
       font-size: 30px;
     }
@@ -25,6 +28,12 @@
   }
   .catalogSwiper {
     margin-top: 37px;
+  }
+  .row-catalogMain {
+    margin-top: 16px;
+    @include media-breakpoint-up(md) {
+      margin-top: 37px;
+    }
   }
 }
 .catalogSwiper {
@@ -76,19 +85,88 @@
     position: relative;
   }
 }
+.row-catalogMain {
+  gap: 12px 0px;
+  .item {
+    cursor: pointer;
+    .wrap-img {
+      width: 100%;
+      height: 140px;
+      border-radius: 32px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-bottom: 12px;
+      @include media-breakpoint-up(sm) {
+        height: 200px;
+      }
+      @include media-breakpoint-up(md) {
+        margin-bottom: 25px;
+        height: 286px;
+      }
+    }
+    h3 {
+      color: $primary-black;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 0;
+      @include media-breakpoint-up(md) {
+        font-size: 18px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 20px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 20px;
+      }
+      @include media-breakpoint-up(xxl) {
+        font-size: 22px;
+      }
+      a {
+        color: $primary-black;
+        text-decoration: none;
+      }
+    }
+    &:hover {
+      a {
+        color: $primary-red;
+      }
+    }
+  }
+}
 .section-category {
   margin-top: 50px;
   .wrap-button-toggle {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
+  }
+  .btn-collapse {
+    margin-bottom: 18px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 36px;
+    }
   }
   .wrap-filter {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
   }
   .wrap-filters-control {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
   }
   .wrap-view-product {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
+    }
   }
 }
 .row-category {
@@ -255,7 +333,16 @@
   margin-bottom: 32px;
   .category {
     .wrap-img {
-      height: 320px;
+      height: 154px;
+      @include media-breakpoint-up(md) {
+        height: 320px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 260px;
+      }
+      @include media-breakpoint-up(xl) {
+        height: 320px;
+      }
       img {
         object-fit: cover;
         height: 100%;
@@ -266,15 +353,17 @@
     }
     .wrap-text {
       display: flex;
-      padding: 18px;
+      padding: 16px;
       flex-direction: column;
       align-items: flex-start;
       align-self: stretch;
-      border-radius: 32px;
+      border-radius: 16px;
       background: $white;
       height: calc(100% - 320px);
       @include media-breakpoint-up(md) {
+        padding: 18px;
         padding: 20px;
+        border-radius: 32px;
       }
       @include media-breakpoint-up(lg) {
         padding: 24px;
@@ -364,16 +453,20 @@
   }
 }
 .section-category {
+  .btn-for-toggle-catalog {
+    margin-bottom: 18px;
+  }
   .row-section-category {
     display: flex;
     flex-wrap: wrap;
     gap: 28px;
     .col-left-block {
       width: 100%;
-      order: 1;
+      @include media-breakpoint-up(lg) {
+        width: 320px;
+      }
       @include media-breakpoint-up(xl) {
         width: 400px;
-        order: 0;
       }
       @include media-breakpoint-up(xxl) {
         width: 500px;
@@ -384,10 +477,11 @@
     }
     .col-right-block {
       width: 100%;
-      order: 0;
+      @include media-breakpoint-up(lg) {
+        width: calc(100% - 320px - 28px);
+      }
       @include media-breakpoint-up(xl) {
         width: calc(100% - 400px - 28px);
-        order: 1;
       }
       @include media-breakpoint-up(xxl) {
         width: calc(100% - 500px - 28px);
