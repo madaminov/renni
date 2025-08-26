@@ -13,10 +13,11 @@
     justify-content: flex-end;
     align-items: flex-start;
     gap: 24px;
-    border-radius: 32px;
+    border-radius: 26px;
     background: $white;
     height: 100%;
     @include media-breakpoint-up(md) {
+      border-radius: 32px;
       padding: 24px;
     }
     @include media-breakpoint-up(lg) {
@@ -26,11 +27,14 @@
       width: 100%;
       height: 360px;
       img {
-        border-radius: 32px;
+        border-radius: 26px;
         object-fit: cover;
         height: 100%;
         width: 100%;
         display: block;
+        @include media-breakpoint-up(md) {
+          border-radius: 32px;
+        }
       }
       @include media-breakpoint-up(md) {
         height: 400px;
@@ -47,7 +51,7 @@
       margin-bottom: 50px;
       .title {
         color: $primary-black;
-        font-size: 24px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -76,7 +80,7 @@
       }
       .date {
         color: $primary-gray;
-        font-size: 14px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%; /* 20.8px */
@@ -86,13 +90,13 @@
       }
       .text {
         color: $primary-black;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 130%; /* 26px */
         a {
           color: $primary-black;
-          font-size: 20px;
+          font-size: 14px;
           font-style: normal;
           font-weight: 400;
           line-height: 130%;
@@ -102,6 +106,9 @@
           text-decoration-thickness: auto;
           text-underline-offset: auto;
           text-underline-position: from-font;
+          @include media-breakpoint-up(md) {
+            font-size: 20px;
+          }
           &:hover {
             color: $primary-red;
           }
@@ -115,11 +122,14 @@
       display: flex;
       align-items: flex-start;
       align-content: flex-start;
-      gap: 12px;
+      gap: 10px;
       align-self: stretch;
       flex-wrap: wrap;
       transition: all 0.3s ease;
       margin-top: auto;
+      @include media-breakpoint-up(md) {
+        gap: 12px;
+      }
     }
   }
 }
@@ -164,7 +174,10 @@
       width: 100%;
       height: 285px;
       display: block;
-      border-radius: 29px;
+      border-radius: 26px;
+      @include media-breakpoint-up(md) {
+        border-radius: 29px;
+      }
       @include media-breakpoint-up(xl) {
         height: 260px;
       }

@@ -1,6 +1,6 @@
 body {
   font-family: $font-stack-medium;
-  font-size: $font-size;
+  font-size: 16px;
   line-height: $line-height;
   font-weight: $font-weight;
   background-color: $body;
@@ -9,6 +9,9 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   min-height: 100vh;
+  @include media-breakpoint-up(md) {
+    ont-size: $font-size;
+  }
 }
 ::-webkit-resizer {
   background-image: url('');
@@ -61,6 +64,11 @@ body {
   --bs-gutter-y: 24px;
   @include media-breakpoint-up(md) {
     --bs-gutter-y: 28px;
+  }
+}
+.gy-md-down-30 {
+  @include media-breakpoint-down(md) {
+    --bs-gutter-y: 30px;
   }
 }
 .gy-32 {
@@ -148,4 +156,10 @@ a {
 }
 a[data-fancybox] {
   text-decoration: none !important;
+}
+.error {
+  font-size: 12px;
+  @include media-breakpoint-up(md) {
+    font-size: 14px;
+  }
 }

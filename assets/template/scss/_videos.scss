@@ -7,7 +7,7 @@
 .row-videos {
   .item {
     display: flex;
-    padding: 15px;
+    padding: 16px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
@@ -56,7 +56,7 @@
       margin-bottom: 8px;
       .title {
         color: $primary-black;
-        font-size: 24px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

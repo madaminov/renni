@@ -1,7 +1,10 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 15px;
+  gap: 10px 10px;
+  @include media-breakpoint-up(md) {
+    gap: 12px 15px;
+  }
 }
 .tag {
   color: $primary-black-2;
@@ -11,7 +14,7 @@
   line-height: normal;
   text-decoration: none;
   display: inline-flex;
-  height: 40px;
+  height: 35px;
   padding: 8px 8px;
   justify-content: center;
   align-items: center;
@@ -53,9 +56,10 @@
   }
 }
 .tag-sm {
-  height: 42px;
+  height: 35px;
   font-size: 14px;
   @include media-breakpoint-up(md) {
+    height: 42px;
     font-size: 14px;
   }
   @include media-breakpoint-up(lg) {
@@ -235,16 +239,21 @@
 }
 .wrap-tabs {
   display: inline-flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  height: 63px;
+  height: 50px;
   flex-shrink: 0;
   border-radius: 36px;
   background: rgba(255, 255, 255, 0.5);
-  padding: 10px;
+  padding: 5px;
   transition: all 0.3s ease;
   box-shadow: none;
   border: none;
+  @include media-breakpoint-up(md) {
+    height: 63px;
+    padding: 5px;
+  }
   .nav-link {
     color: $primary-black;
     font-size: 14px;
@@ -505,7 +514,10 @@
       */
   }
   .col-6 {
-    width: calc(50% - 12px);
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: calc(50% - 12px);
+    }
   }
   .col-md-6 {
     @include media-breakpoint-up(md) {
@@ -561,12 +573,19 @@
 }
 .paginationSwiper {
   width: 100%;
+  border-radius: 26px;
+  @include media-breakpoint-up(md) {
+    border-radius: 32px;
+  }
   .swiper-wrapper {
     margin-bottom: 32px;
   }
   .swiper-slide {
     height: 486px;
-    border-radius: 32px;
+    border-radius: 26px;
+    @include media-breakpoint-up(md) {
+      border-radius: 32px;
+    }
     @include media-breakpoint-up(xl) {
       height: 380px;
     }
@@ -579,7 +598,10 @@
     width: 100%;
     height: 100%;
     display: block;
-    border-radius: 32px;
+    border-radius: 26px;
+    @include media-breakpoint-up(md) {
+      border-radius: 32px;
+    }
   }
   .swiper-pagination-bullet {
     display: flex;
@@ -687,12 +709,13 @@
   }
 }
 .wrap-rekvizit {
-  border-radius: 32px;
+  border-radius: 26px;
   border: 1px solid $primary-gray;
-  padding: 15px;
+  padding: 12px;
   margin-bottom: 36px;
   @include media-breakpoint-up(md) {
     padding: 30px 24px;
+    border-radius: 32px;
   }
   @include media-breakpoint-up(lg) {
     padding: 36px 32px;
@@ -716,7 +739,10 @@
 .form-tagstype {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 15px;
+  gap: 10px 10px;
+  @include media-breakpoint-up(md) {
+    gap: 12px 15px;
+  }
   .form-check {
     width: auto;
     margin: 0;
@@ -733,8 +759,8 @@
     line-height: normal;
     text-decoration: none;
     display: inline-flex;
-    height: 42px;
-    padding: 10px 16px;
+    height: 35px;
+    padding: 8px 8px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -747,6 +773,8 @@
     cursor: pointer;
     @include media-breakpoint-up(md) {
       font-size: 14px;
+      height: 42px;
+      padding: 10px 16px;
     }
     @include media-breakpoint-up(lg) {
       font-size: 14px;

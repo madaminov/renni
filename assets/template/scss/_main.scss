@@ -29,7 +29,7 @@
       height: 320px;
       padding: 36px 28px;
       position: relative;
-      border-radius: 32px;
+      border-radius: 26px;
       background-position: center;
       background-size: cover;
       display: flex;
@@ -45,6 +45,7 @@
       }
       @include media-breakpoint-up(md) {
         height: 520px;
+        border-radius: 32px;
       }
       &::before {
         content: '';
@@ -67,7 +68,9 @@
       position: absolute;
       bottom: 28px;
       left: 36px;
-      transition: all 2.3s ease;
+      max-width: 230px;
+      width: auto;
+      transition: width 1.3s ease;
       z-index: 1;
     }
     .wrap-active {
@@ -80,7 +83,7 @@
       z-index: 1;
       opacity: 0;
       transform: translate(0, 200%);
-      transition: all 0.3s ease;
+      transition: transform 0.5s ease;
     }
     h3 {
       color: $white;
@@ -91,7 +94,7 @@
       margin-bottom: 0;
       position: relative;
       z-index: 2;
-      transition: all 0.3s ease;
+
       @include media-breakpoint-up(xl) {
         opacity: 0;
         font-size: 22px;
@@ -154,12 +157,10 @@
       }
       .wrap-active-no {
         opacity: 0;
-        transition: all 0.8s ease;
       }
       .wrap-active {
         opacity: 1;
         transform: translate(0, 0);
-        transition: all 0.3s ease;
       }
       h3 {
         opacity: 1;
@@ -271,10 +272,13 @@
     min-height: 320px;
     height: 100%;
     width: 100%;
-    border-radius: 36px;
+    border-radius: 26px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @include media-breakpoint-up(md) {
+      border-radius: 36px;
+    }
   }
 }
 .section-projects-videos {
@@ -313,11 +317,12 @@
   margin-top: 18px;
   padding: 16px;
   background-color: $white;
-  border-radius: 32px;
+  border-radius: 26px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 45px;
   @include media-breakpoint-up(md) {
+    border-radius: 32px;
     margin-top: 36px;
     gap: 20px 45px;
     padding: 32px;
@@ -351,7 +356,10 @@
       object-fit: cover;
       height: 100%;
       width: 100%;
-      border-radius: 32px;
+      border-radius: 26px;
+      @include media-breakpoint-up(md) {
+        border-radius: 32px;
+      }
     }
   }
   .wrap-text {
@@ -440,8 +448,11 @@
       margin-top: 39px;
     }
     img {
-      border-radius: 32px;
+      border-radius: 26px;
       filter: brightness(80%);
+      @include media-breakpoint-up(md) {
+        border-radius: 32px;
+      }
     }
     .icon {
       background: $primary-red;

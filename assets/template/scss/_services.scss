@@ -15,10 +15,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
-  border-radius: 32px;
+  border-radius: 26px;
   background: $white;
   height: 100%;
   @include media-breakpoint-up(md) {
+    border-radius: 32px;
     padding: 24px;
   }
   @include media-breakpoint-up(xl) {
@@ -75,13 +76,24 @@
       width: 100%;
       height: 100%;
       display: block;
-      border-radius: 32px;
+      border-radius: 26px;
+      @include media-breakpoint-up(xl) {
+        border-radius: 32px;
+      }
     }
     .servicesSwiper {
       margin-bottom: 12px;
+      border-radius: 26px;
+      @include media-breakpoint-up(xl) {
+        border-radius: 32px;
+      }
       .swiper-slide {
         margin-bottom: 12px;
         padding-bottom: 36px;
+        border-radius: 26px;
+        @include media-breakpoint-up(xl) {
+          border-radius: 32px;
+        }
       }
       .swiper-pagination {
         display: flex;
@@ -132,8 +144,14 @@
     }
 
     .swiper-slide {
-      height: 486px;
-      border-radius: 32px;
+      height: 340px;
+      border-radius: 26px;
+      @include media-breakpoint-up(lg) {
+        height: 486px;
+      }
+      @include media-breakpoint-up(xl) {
+        border-radius: 32px;
+      }
     }
     .servicesThumbsSwiper {
       .swiper-slide {
@@ -207,10 +225,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     align-self: stretch;
     margin-top: auto;
     width: 100%;
+    @include media-breakpoint-up(md) {
+      gap: 12px;
+    }
   }
   .col-cost {
     display: flex;
@@ -246,7 +267,10 @@
   }
 }
 .section-services + .section-services {
-  margin-top: 80px;
+  margin-top: 40px;
+  @include media-breakpoint-up(md) {
+    margin-top: 80px;
+  }
 }
 .item-services-type-2 {
   display: flex;
@@ -256,11 +280,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
-  border-radius: 32px;
+  border-radius: 26px;
   border: 1px solid $primary-gray;
   height: 100%;
   @include media-breakpoint-up(md) {
     padding: 24px;
+    border-radius: 32px;
   }
   @include media-breakpoint-up(xl) {
     padding: 24px;
@@ -291,11 +316,14 @@
   .wrap-tags {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     align-self: stretch;
     margin-top: auto;
     width: 100%;
     flex-wrap: wrap;
+    @include media-breakpoint-up(md) {
+      gap: 12px;
+    }
     .tag {
       &:hover {
         color: $white;
@@ -337,11 +365,12 @@
     align-items: flex-start;
     gap: 24px;
     flex: 1 0 0;
-    border-radius: 32px;
+    border-radius: 26px;
     background: $primary-red;
     color: $white;
     @include media-breakpoint-up(md) {
       padding: 24px;
+      border-radius: 32px;
     }
     @include media-breakpoint-up(xl) {
       padding: 24px;
@@ -355,11 +384,12 @@
   }
 }
 .wrap-service {
-  border-radius: 32px;
+  border-radius: 26px;
   border: 1px solid $primary-gray;
   padding: 15px;
   @include media-breakpoint-up(md) {
     padding: 24px 24px;
+    border-radius: 32px;
   }
   @include media-breakpoint-up(xl) {
     padding: 24px 24px;
@@ -368,10 +398,13 @@
     padding: 24px 32px;
   }
   img {
-    border-radius: 32px;
+    border-radius: 26px;
     object-fit: cover;
     height: 100%;
     width: 100%;
     display: block;
+    @include media-breakpoint-up(md) {
+      border-radius: 32px;
+    }
   }
 }
