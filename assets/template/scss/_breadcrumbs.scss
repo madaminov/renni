@@ -6,20 +6,20 @@
   flex-wrap: wrap;
   gap: 10px 16px;
   @include media-breakpoint-up(md) {
-    gap: 12px 24px;
+    gap: 12px 20px;
   }
   @include media-breakpoint-up(lg) {
-    gap: 16px 32px;
+    gap: 16px 20px;
   }
   .breadcrumbs__item {
     position: relative;
     display: flex;
     gap: 16px;
     @include media-breakpoint-up(md) {
-      gap: 24px;
+      gap: 20px;
     }
     @include media-breakpoint-up(lg) {
-      gap: 32px;
+      gap: 20px;
     }
     &::after {
       content: '/';
@@ -29,10 +29,10 @@
       font-weight: 400;
       line-height: normal;
       @include media-breakpoint-up(md) {
-        font-size: 16px;
+        font-size: 14px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
     &:last-child::after {
@@ -55,7 +55,7 @@
         font-size: 16px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 20px;
+        font-size: 16px;
       }
     }
     a {

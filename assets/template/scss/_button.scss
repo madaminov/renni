@@ -61,19 +61,19 @@
   }
   @include media-breakpoint-up(lg) {
     width: 80px;
-    height: 45px;
+    height: 40px;
   }
   @include media-breakpoint-up(xl) {
     width: 80px;
-    height: 45px;
+    height: 43px;
   }
   @include media-breakpoint-up(xxl) {
     width: 90px;
-    height: 47px;
+    height: 45px;
   }
   @media #{$big_screen} {
     width: 100px;
-    height: 49px;
+    height: 47px;
   }
   &.open {
     z-index: 4;
@@ -230,7 +230,7 @@
     padding: 10px 16px;
   }
   @media #{$big_screen} {
-    font-size: 20px;
+    font-size: 18px;
     height: 42px;
     padding: 10px 16px;
   }
@@ -356,13 +356,13 @@
   &::after {
     content: '';
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     flex: 0 0 auto;
     background-color: $primary-black-2;
     background-position: center;
-    background-size: 15px;
+    background-size: 14px;
     background-repeat: no-repeat;
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxOCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgOEMwLjY5ODE4MiA4IDEwLjk1NzYgOCAxNiA4TTE2IDhMOS4zMDkwOSAxTTE2IDhMOS4zMDkwOSAxNSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=');
   }
@@ -370,8 +370,8 @@
     font-size: 16px;
     padding: 6px 6px 6px 28px;
     &::after {
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 32px;
       background-size: 15px;
     }
   }
@@ -379,8 +379,8 @@
     font-size: 18px;
     padding: 6px 6px 6px 28px;
     &::after {
-      width: 45px;
-      height: 45px;
+      width: 36px;
+      height: 36px;
       background-size: 18px;
     }
   }
@@ -388,8 +388,8 @@
     font-size: 20px;
     padding: 6px 6px 6px 30px;
     &::after {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       background-size: 20px;
     }
   }
@@ -397,17 +397,17 @@
     font-size: 20px;
     padding: 6px 6px 6px 30px;
     &::after {
-      width: 60px;
-      height: 60px;
+      width: 48px;
+      height: 48px;
       background-size: 20px;
     }
   }
   @media #{$big_screen} {
-    font-size: 22px;
+    font-size: 20px;
     padding: 6px 6px 6px 32px;
     &::after {
-      width: 65px;
-      height: 65px;
+      width: 52px;
+      height: 52px;
       background-size: 20px;
     }
   }
@@ -461,8 +461,8 @@
   &::after {
     content: '';
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background-color: $white;
     background-position: center;
@@ -474,8 +474,8 @@
     font-size: 16px;
     padding: 6px 6px 6px 28px;
     &::after {
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 32px;
       background-size: 15px;
     }
   }
@@ -483,8 +483,8 @@
     font-size: 18px;
     padding: 6px 6px 6px 28px;
     &::after {
-      width: 45px;
-      height: 45px;
+      width: 36px;
+      height: 36px;
       background-size: 18px;
     }
   }
@@ -492,8 +492,8 @@
     font-size: 20px;
     padding: 6px 6px 6px 30px;
     &::after {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       background-size: 20px;
     }
   }
@@ -501,17 +501,17 @@
     font-size: 20px;
     padding: 6px 6px 6px 30px;
     &::after {
-      width: 60px;
-      height: 60px;
+      width: 48px;
+      height: 48px;
       background-size: 20px;
     }
   }
   @media #{$big_screen} {
-    font-size: 22px;
+    font-size: 20px;
     padding: 6px 6px 6px 32px;
     &::after {
-      width: 65px;
-      height: 65px;
+      width: 52px;
+      height: 52px;
       background-size: 20px;
     }
   }
@@ -548,30 +548,39 @@
   font-size: 14px;
   padding: 4px 4px 4px 16px;
   &::after {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     background-size: 12px;
   }
   @include media-breakpoint-up(md) {
-    font-size: 16px;
+    font-size: 14px;
     padding: 4px 4px 4px 16px;
     &::after {
-      width: 36px;
-      height: 36px;
+      width: 32px;
+      height: 32px;
       background-size: 12px;
     }
   }
   @include media-breakpoint-up(lg) {
-    font-size: 18px;
+    font-size: 16px;
     padding: 4px 4px 4px 18px;
+    &::after {
+      width: 36px;
+      height: 36px;
+      background-size: 14px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+    padding: 4px 4px 4px 20px;
     &::after {
       width: 38px;
       height: 38px;
       background-size: 14px;
     }
   }
-  @include media-breakpoint-up(xl) {
-    font-size: 18px;
+  @include media-breakpoint-up(xxl) {
+    font-size: 16px;
     padding: 4px 4px 4px 20px;
     &::after {
       width: 40px;
@@ -579,21 +588,12 @@
       background-size: 14px;
     }
   }
-  @include media-breakpoint-up(xxl) {
+  @media #{$big_screen} {
     font-size: 18px;
-    padding: 4px 4px 4px 20px;
+    padding: 4px 4px 4px 24px;
     &::after {
       width: 42px;
       height: 42px;
-      background-size: 14px;
-    }
-  }
-  @media #{$big_screen} {
-    font-size: 20px;
-    padding: 4px 4px 4px 24px;
-    &::after {
-      width: 44px;
-      height: 44px;
       background-size: 16px;
     }
   }
@@ -619,8 +619,8 @@
   &::after {
     content: '';
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background-color: $white;
     background-position: center;
@@ -632,8 +632,8 @@
     font-size: 16px;
     padding: 6px 6px 6px 28px;
     &::after {
-      width: 40px;
-      height: 40px;
+      width: 32px;
+      height: 32px;
       background-size: 15px;
     }
   }
@@ -641,8 +641,8 @@
     font-size: 18px;
     padding: 6px 6px 6px 28px;
     &::after {
-      width: 45px;
-      height: 45px;
+      width: 36px;
+      height: 36px;
       background-size: 18px;
     }
   }
@@ -650,8 +650,8 @@
     font-size: 20px;
     padding: 6px 6px 6px 30px;
     &::after {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       background-size: 20px;
     }
   }
@@ -659,17 +659,17 @@
     font-size: 20px;
     padding: 6px 6px 6px 30px;
     &::after {
-      width: 60px;
-      height: 60px;
+      width: 48px;
+      height: 48px;
       background-size: 20px;
     }
   }
   @media #{$big_screen} {
-    font-size: 22px;
+    font-size: 20px;
     padding: 6px 6px 6px 32px;
     &::after {
-      width: 65px;
-      height: 65px;
+      width: 52px;
+      height: 52px;
       background-size: 20px;
     }
   }
@@ -759,7 +759,7 @@
 }
 .btn-prev {
   color: $primary-black;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -767,10 +767,10 @@
   gap: 12px;
   align-items: center;
   @include media-breakpoint-up(md) {
-    font-size: 18px;
+    font-size: 16px;
   }
   @include media-breakpoint-up(lg) {
-    font-size: 20px;
+    font-size: 16px;
   }
   &::before {
     content: '';

@@ -50,10 +50,10 @@
         font-size: 28px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 30px;
+        font-size: 24px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 32px;
+        font-size: 25px;
       }
       a {
         color: $primary-black;

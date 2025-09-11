@@ -47,16 +47,16 @@ footer {
       text-decoration: none;
       flex: 0 0 auto;
       @include media-breakpoint-up(md) {
-        font-size: 30px;
+        font-size: 24px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 32px;
+        font-size: 25px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 34px;
+        font-size: 27px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 34px;
+        font-size: 27px;
       }
       @media #{$big_screen} {
         font-size: 38px;
@@ -147,13 +147,13 @@ footer {
         font-size: 18px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 24px;
+        font-size: 22px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 26px;
+        font-size: 24px;
       }
       @media #{$big_screen} {
-        font-size: 28px;
+        font-size: 26px;
       }
     }
   }
@@ -212,7 +212,7 @@ footer {
         font-size: 18px;
       }
       @media #{$big_screen} {
-        font-size: 20px;
+        font-size: 18px;
       }
       a {
         color: $white;
@@ -304,10 +304,10 @@ footer {
       font-size: 18px;
     }
     @include media-breakpoint-up(xxl) {
-      font-size: 20px;
+      font-size: 18px;
     }
     @media #{$big_screen} {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   .row-bottom {
@@ -411,6 +411,13 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 8px;
+  }
+  .footerInfo {
+    color: $primary-gray;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
   }
 }
 .section-write-us + footer {

@@ -31,6 +31,7 @@
       align-items: center;
       .wrap-tabs {
         transition: all 0.3s ease;
+        background-color: $primary-gray-2;
         &:hover {
           background-color: $primary-gray-2;
         }
@@ -63,16 +64,17 @@
         margin-bottom: 0px;
         min-height: 59px;
         @include media-breakpoint-up(md) {
-          font-size: 26px;
+          font-size: 20px;
+          margin-bottom: 36px;
         }
         @include media-breakpoint-up(lg) {
-          font-size: 28px;
+          font-size: 22px;
         }
         @include media-breakpoint-up(xl) {
-          font-size: 30px;
+          font-size: 24px;
         }
         @include media-breakpoint-up(xxl) {
-          font-size: 32px;
+          font-size: 25px;
         }
         a {
           color: $primary-black;

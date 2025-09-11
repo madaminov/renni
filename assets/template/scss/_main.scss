@@ -22,8 +22,9 @@
     @include media-breakpoint-up(xxl) {
       width: calc(15%) !important;
     }
-
-    @include transition(0.5s);
+    will-change: transform;
+    will-change: opacity;
+    transition: all 1s ease;
     .item {
       margin: 0 5px;
       height: 320px;
@@ -70,6 +71,7 @@
       left: 36px;
       max-width: 230px;
       width: auto;
+      will-change: transform;
       transition: width 1.3s ease;
       z-index: 1;
     }
@@ -83,7 +85,9 @@
       z-index: 1;
       opacity: 0;
       transform: translate(0, 200%);
-      transition: transform 0.5s ease;
+      will-change: transform;
+      will-change: opacity;
+      transition: transform 0.5s ease, opacity 1s ease;
     }
     h3 {
       color: $white;
@@ -161,6 +165,7 @@
       .wrap-active {
         opacity: 1;
         transform: translate(0, 0);
+        transition: transform 0.5s ease, opacity 3s ease;
       }
       h3 {
         opacity: 1;
@@ -234,26 +239,26 @@
       margin-bottom: 0;
       margin-top: 0px;
       @include media-breakpoint-up(sm) {
-        font-size: 32px;
+        font-size: 25px;
       }
       @include media-breakpoint-up(md) {
-        font-size: 32px;
+        font-size: 25px;
         margin-top: 32px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 34px;
+        font-size: 27px;
         margin-top: 34px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 36px;
+        font-size: 28px;
         margin-top: 36px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 40px;
+        font-size: 32px;
         margin-top: 40px;
       }
       @media #{$big_screen} {
-        font-size: 42px;
+        font-size: 33px;
         margin-top: 44px;
       }
     }
@@ -300,16 +305,16 @@
       font-size: 22px;
     }
     @include media-breakpoint-up(md) {
-      font-size: 30px;
+      font-size: 24px;
     }
     @include media-breakpoint-up(lg) {
-      font-size: 32px;
+      font-size: 25px;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 34px;
+      font-size: 27px;
     }
     @include media-breakpoint-up(xxl) {
-      font-size: 36px;
+      font-size: 28px;
     }
   }
 }
@@ -407,10 +412,10 @@
       font-size: 28px;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 30px;
+      font-size: 24px;
     }
     @include media-breakpoint-up(xxl) {
-      font-size: 32px;
+      font-size: 25px;
     }
   }
   p {
@@ -523,16 +528,16 @@
         font-size: 24px;
       }
       @include media-breakpoint-up(md) {
-        font-size: 30px;
+        font-size: 24px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 32px;
+        font-size: 25px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 34px;
+        font-size: 27px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 36px;
+        font-size: 28px;
       }
     }
     p {
@@ -612,17 +617,17 @@
       line-height: 120%; /* 43.2px */
       margin-bottom: 18px;
       @include media-breakpoint-up(md) {
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 32px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 32px;
+        font-size: 25px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 34px;
+        font-size: 27px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 36px;
+        font-size: 28px;
       }
     }
     .form-group {

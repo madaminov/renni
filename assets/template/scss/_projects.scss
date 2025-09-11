@@ -152,16 +152,17 @@
       line-height: normal;
       margin-bottom: 0px;
       @include media-breakpoint-up(md) {
-        font-size: 26px;
+        font-size: 20px;
+        margin-bottom: 36px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 28px;
+        font-size: 22px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 30px;
+        font-size: 24px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 32px;
+        font-size: 25px;
       }
       a {
         color: $primary-black;
@@ -201,11 +202,17 @@
         text-underline-offset: auto;
         text-underline-position: from-font;
         @include media-breakpoint-up(md) {
-          font-size: 20px;
+          font-size: 16px;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 18px;
         }
       }
       @include media-breakpoint-up(md) {
-        font-size: 20px;
+        font-size: 16px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 18px;
       }
     }
     .wrap-tags {

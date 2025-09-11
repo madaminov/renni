@@ -58,16 +58,17 @@
         margin-bottom: 0px;
         min-height: 59px;
         @include media-breakpoint-up(md) {
-          font-size: 26px;
+          font-size: 20px;
+          margin-bottom: 36px;
         }
         @include media-breakpoint-up(lg) {
-          font-size: 28px;
+          font-size: 22px;
         }
         @include media-breakpoint-up(xl) {
-          font-size: 30px;
+          font-size: 24px;
         }
         @include media-breakpoint-up(xxl) {
-          font-size: 32px;
+          font-size: 25px;
         }
         a {
           color: $primary-black;
@@ -137,12 +138,12 @@
   margin-top: 50px;
   .date {
     color: $primary-gray;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 20.8px */
     @include media-breakpoint-up(md) {
-      font-size: 20px;
+      font-size: 18px;
     }
     margin-bottom: 36px;
   }
@@ -201,13 +202,13 @@
         order: 1;
       }
       @include media-breakpoint-up(xxl) {
-        margin-left: calc(30% + 32px);
+        margin-left: calc(25% + 32px);
         margin-right: 85px;
-        width: calc(43% - 32px - 85px);
+        width: calc(25% - 32px - 85px);
       }
       @media #{$big_screen} {
-        width: calc(39% - 32px - 85px);
-        margin-left: calc(32% + 32px);
+        width: calc(25% - 32px - 85px);
+        margin-left: calc(25% + 32px);
       }
     }
   }
@@ -239,10 +240,10 @@
       order: 0;
     }
     @include media-breakpoint-up(xxl) {
-      width: 30%;
+      width: 25%;
     }
     @media #{$big_screen} {
-      width: 32%;
+      width: 25%;
     }
   }
   .col-content {
@@ -263,10 +264,10 @@
     @include media-breakpoint-up(xxl) {
       margin-left: 32px;
       margin-right: 85px;
-      width: calc(43% - 32px - 85px);
+      width: calc(50% - 32px - 85px);
     }
     @media #{$big_screen} {
-      width: calc(39% - 32px - 85px);
+      width: calc(50% - 32px - 85px);
       margin-left: 32px;
       margin-right: 85px;
     }
@@ -303,10 +304,10 @@
       order: 2;
     }
     @include media-breakpoint-up(xxl) {
-      width: 27%;
+      width: 25%;
     }
     @media #{$big_screen} {
-      width: 29%;
+      width: 25%;
     }
   }
 }

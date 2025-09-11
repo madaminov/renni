@@ -10,7 +10,7 @@ body {
   flex-wrap: nowrap;
   min-height: 100vh;
   @include media-breakpoint-up(md) {
-    ont-size: $font-size;
+    font-size: $font-size;
   }
 }
 ::-webkit-resizer {
@@ -51,6 +51,14 @@ body {
   @include media-breakpoint-up(lg) {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 .gx-6 {
@@ -114,9 +122,21 @@ body {
 .section-pl-pr-18 {
   padding-left: 0px;
   padding-right: 0px;
+  @include media-breakpoint-up(md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   @include media-breakpoint-up(lg) {
     padding-left: 18px;
     padding-right: 18px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 .section-pl-pr-7 {
@@ -138,6 +158,14 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
+  @include media-breakpoint-up(xl) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }
 
 .pagination {
@@ -156,10 +184,14 @@ a {
 }
 a[data-fancybox] {
   text-decoration: none !important;
+  outline: none !important;
 }
 .error {
   font-size: 12px;
   @include media-breakpoint-up(md) {
     font-size: 14px;
   }
+}
+.mb-18 {
+  margin-bottom: 18px;
 }

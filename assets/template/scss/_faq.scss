@@ -58,17 +58,17 @@
       line-height: normal;
       margin-bottom: 0px;
       @include media-breakpoint-up(md) {
-        font-size: 26px;
-        min-height: 59px;
+        font-size: 20px;
+        margin-bottom: 36px;
       }
       @include media-breakpoint-up(lg) {
-        font-size: 28px;
+        font-size: 22px;
       }
       @include media-breakpoint-up(xl) {
-        font-size: 30px;
+        font-size: 24px;
       }
       @include media-breakpoint-up(xxl) {
-        font-size: 32px;
+        font-size: 25px;
       }
       a {
         color: $primary-black;
@@ -172,16 +172,17 @@
     line-height: 130%; /* 41.6px */
     margin-bottom: 0px;
     @include media-breakpoint-up(md) {
-      font-size: 26px;
+      font-size: 20px;
+      margin-bottom: 36px;
     }
     @include media-breakpoint-up(lg) {
-      font-size: 28px;
+      font-size: 22px;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 30px;
+      font-size: 24px;
     }
     @include media-breakpoint-up(xxl) {
-      font-size: 32px;
+      font-size: 25px;
     }
   }
   .wrap-img {
@@ -301,16 +302,16 @@
     line-height: 120%; /* 43.2px */
     margin-bottom: 0;
     @include media-breakpoint-up(md) {
-      font-size: 30px;
+      font-size: 24px;
     }
     @include media-breakpoint-up(lg) {
-      font-size: 32px;
+      font-size: 25px;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 34px;
+      font-size: 27px;
     }
     @include media-breakpoint-up(xxl) {
-      font-size: 36px;
+      font-size: 28px;
     }
   }
   .navigation-faq-similar {

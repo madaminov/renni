@@ -14,16 +14,16 @@
     line-height: 120%; /* 43.2px */
     margin-bottom: 26px;
     @include media-breakpoint-up(md) {
-      font-size: 30px;
+      font-size: 24px;
     }
     @include media-breakpoint-up(lg) {
-      font-size: 32px;
+      font-size: 25px;
     }
     @include media-breakpoint-up(xl) {
-      font-size: 34px;
+      font-size: 27px;
     }
     @include media-breakpoint-up(xxl) {
-      font-size: 36px;
+      font-size: 28px;
     }
   }
 }
@@ -87,6 +87,7 @@
         transition: all 0.3s ease;
       }
     }
+    a,
     span {
       display: inline-block;
       width: 100%;
@@ -96,11 +97,19 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      text-decoration: none;
+      &:hover {
+        color: $primary-red;
+        text-decoration: none;
+      }
     }
     &:hover {
       img {
         filter: none;
         -webkit-filter: grayscale(0);
+      }
+      a {
+        color: $primary-red;
       }
     }
   }
