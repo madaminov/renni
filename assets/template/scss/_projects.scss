@@ -6,6 +6,9 @@
   .wrap-view-product {
     margin-bottom: 32px;
   }
+  .wrap-filter {
+    margin-bottom: 32px;
+  }
 }
 .row-projets {
   .item-project {
@@ -153,6 +156,7 @@
       margin-bottom: 0px;
       @include media-breakpoint-up(md) {
         font-size: 20px;
+        min-height: 60px;
         margin-bottom: 36px;
       }
       @include media-breakpoint-up(lg) {
