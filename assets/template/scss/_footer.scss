@@ -426,3 +426,15 @@ footer {
     margin-top: 0px;
   }
 }
+.link-power {
+  color: $primary-gray;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  &:hover {
+    color: $primary-gray;
+    text-decoration: underline;
+  }
+}

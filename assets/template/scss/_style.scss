@@ -609,7 +609,7 @@
     margin-bottom: 32px;
   }
   .swiper-slide {
-    height: 486px;
+    height: 380px;
     border-radius: 26px;
     @include media-breakpoint-up(md) {
       border-radius: 32px;
@@ -675,6 +675,7 @@
     bottom: 0;
   }
 }
+
 .wrap-share {
   display: flex;
   gap: 24px;
